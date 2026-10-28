@@ -1,7 +1,5 @@
 # Patente ao Alcance — Planejamento de 150 horas por integrante
 
-> Documento convertido da versão editada no Google Docs em 28/10/2026. Revisão de origem: `AHj4eMSrx9HBdD2EJBAeOIPYHFtYtO-u9up38z7DXBNQ0OnOH1u64Ig3QoIImKW04T_8JuhNuVBrNDmBzfWjXAmr8p7bDXSRYfLFTvkSQ3Q`.
-
 Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  03/11/2026 a 23/12/2026
 
 | Parâmetro | Definição |

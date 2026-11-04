@@ -1,0 +1,23 @@
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: never
+
+spring:
+  application:
+    name: patente-ao-alcance-api
+  jackson:
+    default-property-inclusion: non_null
+
+app:
+  web:
+    allowed-origin: ${WEB_ORIGIN:http://localhost:5173}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never

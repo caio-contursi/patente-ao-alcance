@@ -18,6 +18,7 @@ import {
   X,
 } from "lucide-react";
 import { explainMatches, searchPatents, type PatentDocument } from "./api";
+import ResearchChat from "./ResearchChat";
 
 const starterQuery =
   "Sistema para captar e filtrar água da chuva em um reservatório, com sensor de nível para monitorar o volume armazenado.";
@@ -33,7 +34,10 @@ function App() {
   const [selected, setSelected] = useState<string[]>([]);
   const [explanation, setExplanation] = useState("");
   const [showInfo, setShowInfo] = useState(false);
-  const [activeNav, setActiveNav] = useState("Pesquisar");
+  const [activeNav, setActiveNav] = useState(
+    window.location.hash === "#assistente" ? "Chat com a IA" : "Pesquisar",
+  );
+  const chatOpen = activeNav === "Chat com a IA";
   const [mobileMenu, setMobileMenu] = useState(false);
 
   async function runSearch(value = query) {
@@ -67,11 +71,14 @@ function App() {
   }
 
   function navTo(section: string) {
-    setActiveNav(section);
+    if (section !== "Como funciona") {
+      setActiveNav(section);
+      window.history.replaceState(null, "", section === "Chat com a IA" ? "#assistente" : "#top");
+    }
     if (section === "Como funciona") setShowInfo(true);
     if (section === "Aprender")
-      document.getElementById("learn")?.scrollIntoView({ behavior: "smooth" });
-    if (section === "Pesquisar")
+      requestAnimationFrame(() => document.getElementById("learn")?.scrollIntoView({ behavior: "smooth" }));
+    if (section === "Pesquisar" || section === "Chat com a IA")
       window.scrollTo({ top: 0, behavior: "smooth" });
     setMobileMenu(false);
   }
@@ -98,7 +105,7 @@ function App() {
           className={mobileMenu ? "main-nav open" : "main-nav"}
           aria-label="Navegação principal"
         >
-          {["Pesquisar", "Como funciona", "Aprender"].map((item) => (
+          {["Pesquisar", "Chat com a IA", "Como funciona", "Aprender"].map((item) => (
             <button
               key={item}
               className={activeNav === item ? "nav-link active" : "nav-link"}
@@ -129,6 +136,8 @@ function App() {
       </header>
 
       <main id="top">
+        <div hidden={!chatOpen}><ResearchChat /></div>
+        <div hidden={chatOpen}>
         <section className="hero">
           <div className="hero-copy">
             <div className="eyebrow">
@@ -423,6 +432,7 @@ function App() {
             </div>
           </aside>
         </section>
+        </div>
       </main>
 
       <footer className="site-footer">

@@ -6,7 +6,7 @@
 - `frontend/`: interface React + TypeScript para busca guiada, resultados, seleção para comparação, avisos de escopo e apresentação responsiva.
 - `docs/`: planejamento e visão do produto usados como referência.
 
-O corpus que acompanha o backend e o fallback do frontend são **inteiramente sintéticos**. Não representam pedidos ou publicações do INPI. Esta versão não consulta bases oficiais e ainda não está conectada a um modelo de IA.
+A aba **Pesquisar** usa exemplos sintéticos. A aba **Chat com a IA** usa um catálogo separado, com publicações reais da RPI e referências educativas do INPI.
 
 ## Executar a interface
 
@@ -18,7 +18,10 @@ npm install
 npm run dev
 ```
 
-Abra `http://localhost:5173`. Se a API Java estiver ativa, a interface usa a API; se ela estiver desligada, há um fallback local igualmente sintético.
+Abra `http://localhost:5173`. A busca demonstrativa tem exemplos locais
+quando a API Java está desligada. O chat requer a API.
+Se o Vite usar outra porta, configure `WEB_ORIGIN` com o endereço exato da
+interface antes de iniciar o Java. Origens múltiplas podem ser separadas por vírgula.
 
 ## Executar a API
 
@@ -36,6 +39,7 @@ A API inicia em `http://localhost:8080`. Os endpoints iniciais são:
 - `GET /api/patents/{id}`
 - `POST /api/explain`
 - `POST /api/feedback`
+- `POST /api/research/chat`
 
 Exemplo de pesquisa:
 
@@ -44,6 +48,30 @@ Exemplo de pesquisa:
   "description": "Sistema para captar água da chuva com filtragem e sensor de nível"
 }
 ```
+
+## Executar o chat com IA local
+
+Com a API Java e a interface em execução, abra **Chat com a IA** na navegação.
+A API usa o Ollama em `http://127.0.0.1:11434/api/chat`, com o modelo
+`qwen2.5:1.5b`. Em um ambiente com Docker, inicie o serviço em loopback e
+baixe o modelo:
+
+```powershell
+docker run -d --name patente-ollama -e OLLAMA_NO_CLOUD=1 -p 127.0.0.1:11434:11434 -v patente-ollama-models:/root/.ollama ollama/ollama
+docker exec patente-ollama ollama pull qwen2.5:1.5b
+```
+
+Defina `RESEARCH_OLLAMA_URL` e `RESEARCH_OLLAMA_MODEL` ao iniciar o Java para
+usar outro endpoint ou modelo. O endpoint `POST /api/research/chat` recebe a
+pergunta e até três perguntas anteriores. O Java faz a busca por termos e
+sinônimos, seleciona fontes do catálogo em
+`backend/src/main/resources/research/sources.json` e associa a resposta às
+referências do catálogo. Quando a geração falha, a tela mostra os resumos
+recuperados. A conversa fica na memória da página.
+
+O catálogo inicial reúne dois pedidos publicados na RPI sobre captação de
+água e quatro referências educativas do INPI. Ele não cobre a base nacional
+completa. A aba de pesquisa anterior continua com seus dados demonstrativos.
 
 ## Próximas etapas técnicas
 

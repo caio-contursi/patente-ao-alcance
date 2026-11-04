@@ -23,7 +23,7 @@ type Reply = {
 type Turn = { question: string; reply?: Reply; error?: string };
 
 const examples = [
-  "Busque sistemas de captação de água da chuva com filtragem e reservatório.",
+  "Compare captação de água da chuva com filtro e reservatório.",
   "O que é estado da técnica?",
   "Quais são os requisitos para patentear uma invenção?",
 ];

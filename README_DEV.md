@@ -59,6 +59,7 @@ baixe o modelo:
 ```powershell
 docker run -d --name patente-ollama -e OLLAMA_NO_CLOUD=1 -p 127.0.0.1:11434:11434 -v patente-ollama-models:/root/.ollama ollama/ollama
 docker exec patente-ollama ollama pull qwen2.5:1.5b
+docker exec patente-ollama ollama pull qwen3-embedding:0.6b
 ```
 
 Defina `RESEARCH_OLLAMA_URL` e `RESEARCH_OLLAMA_MODEL` ao iniciar o Java para
@@ -68,6 +69,13 @@ sinônimos, seleciona fontes do catálogo em
 `backend/src/main/resources/research/sources.json` e associa a resposta às
 referências do catálogo. Quando a geração falha, a tela mostra os resumos
 recuperados. A conversa fica na memória da página.
+
+O chat exibe o plano da consulta, a busca, a conferência de referências do
+catálogo, as correspondências por característica e a resposta final.
+`RESEARCH_EMBEDDING_MODEL` configura o modelo de busca semântica. A API
+usa correspondência textual quando o modelo está indisponível.
+Cada consulta pode ser baixada como relatório Markdown ou salva por escolha
+da pessoa no navegador. Os relatórios salvos ficam neste navegador.
 
 O catálogo inicial reúne dois pedidos publicados na RPI sobre captação de
 água e quatro referências educativas do INPI. Ele não cobre a base nacional

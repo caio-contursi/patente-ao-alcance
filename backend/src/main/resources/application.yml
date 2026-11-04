@@ -16,6 +16,7 @@ app:
 research:
   ollama-url: ${RESEARCH_OLLAMA_URL:http://127.0.0.1:11434/api/chat}
   ollama-model: ${RESEARCH_OLLAMA_MODEL:qwen2.5:1.5b}
+  embedding-model: ${RESEARCH_EMBEDDING_MODEL:qwen3-embedding:0.6b}
 
 management:
   endpoints:

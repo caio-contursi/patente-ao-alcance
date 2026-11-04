@@ -1,6 +1,43 @@
 .research-chat {
   margin-top: 27px;
 }
+.research-stages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+  margin: 16px 0 0;
+}
+.research-stages li {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 10px;
+  font-weight: 600;
+}
+.research-stages span {
+  color: var(--teal);
+  margin-right: 4px;
+}
+.research-trace {
+  padding-left: 20px;
+}
+.research-trace > li {
+  padding: 6px 0;
+}
+.research-report-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.research-save-notice {
+  margin: 0 16px 12px;
+  color: var(--teal);
+}
+.research-saved {
+  padding-left: 16px;
+  overflow-wrap: anywhere;
+}
 .research-header {
   display: flex;
   align-items: flex-start;

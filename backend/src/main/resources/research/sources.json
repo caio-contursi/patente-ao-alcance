@@ -2,6 +2,7 @@
   {
     "title": "Sistema aplicado em veículos automotores para captação de água da chuva",
     "reference": "PI 0904078-1 A2 · RPI 2112",
+    "classifications": ["B60R 99/00"],
     "url": "https://revistas.inpi.gov.br/pdf/PATENTES2112.pdf",
     "summary": "O resumo publicado descreve um captador de chuva para veículos que conduz a água por uma tubulação, um filtro de resíduos e uma válvula até o reservatório do limpador de para-brisa ou outro compartimento.",
     "keywords": [
@@ -14,6 +15,7 @@
   {
     "title": "Configuração aplicada em cisterna com sistema de captação de água",
     "reference": "PI 1002056-0 A2 · RPI 2255",
+    "classifications": ["E03B 3/03", "E03B 11/02"],
     "url": "https://revistas.inpi.gov.br/pdf/PATENTES2255.pdf",
     "summary": "O resumo publicado descreve uma cisterna escavada e revestida com geomembrana. A cobertura tem entradas para água e reduz a incidência direta de luz solar, com a finalidade de retardar o aparecimento de algas.",
     "keywords": [

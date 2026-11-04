@@ -9,6 +9,7 @@ type Source = {
   url: string;
   summary: string;
   matchedTerms: string[];
+  classifications: string[];
 };
 
 type Reply = {
@@ -18,6 +19,14 @@ type Reply = {
   sources: Source[];
   searchTerms: string[];
   scope: string;
+  audit?: {
+    expandedTerms: string[];
+    comparisons: { feature: string; sourceNumbers: number[] }[];
+    searchMode: string;
+    indexed: number;
+    matched: number;
+    cited: number;
+  };
 };
 
 type Turn = { question: string; reply?: Reply; error?: string };
@@ -34,10 +43,63 @@ const modeLabels = {
   NO_EVIDENCE: "Sem evidência na amostra",
 };
 
+const stages = ["Planejar", "Buscar", "Verificar", "Analisar", "Entregar"];
+const reportStorageKey = "patente-ao-alcance.reports.v1";
+type SavedReport = { id: string; title: string; markdown: string };
+
+function reportMarkdown(question: string, reply: Reply) {
+  const lines = [
+    "# Relatório de pesquisa",
+    "",
+    ...question.split("\n").map((line) => "> " + line),
+    "",
+    reply.scope,
+    "",
+    "## Resposta",
+    reply.message,
+    ...reply.statements.map((item) => `${item.text} [${item.source}]`),
+    "",
+    "## Evidências",
+    ...reply.sources.flatMap((source) => [
+      `### [${source.number}] ${source.title}`,
+      source.reference, source.url, source.summary, "",
+    ]),
+    "## Plano de busca",
+    `Busca: ${reply.audit?.searchMode ?? "—"}`,
+    `Termos: ${reply.searchTerms.join(", ")}`,
+    `Expansão: ${reply.audit?.expandedTerms.join(", ") || "—"}`,
+    "",
+    "## Correspondências por característica",
+    ...(reply.audit?.comparisons.map((item) =>
+      `- ${item.feature}: ${item.sourceNumbers.map((number) => `[${number}]`).join(", ") || "Sem correspondência textual"}`) ?? []),
+  ];
+  return lines.join("\n");
+}
+
+function downloadReport(markdown: string) {
+  const url = URL.createObjectURL(new Blob([markdown], { type: "text/markdown;charset=utf-8" }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "patente-ao-alcance-pesquisa.md";
+  link.click();
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 export default function ResearchChat() {
   const [question, setQuestion] = useState("");
   const [turns, setTurns] = useState<Turn[]>([]);
   const [busy, setBusy] = useState(false);
+  const [savedReports, setSavedReports] = useState<SavedReport[]>(() => {
+    try {
+      const stored: unknown = JSON.parse(localStorage.getItem(reportStorageKey) ?? "[]");
+      return Array.isArray(stored) ? stored.filter((item): item is SavedReport =>
+        item && typeof item.id === "string" && typeof item.title === "string" && typeof item.markdown === "string",
+      ).slice(0, 15) : [];
+    } catch {
+      return [];
+    }
+  });
+  const [saveNotice, setSaveNotice] = useState("");
   const current = useRef<AbortController | null>(null);
   const end = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
@@ -96,6 +158,22 @@ export default function ResearchChat() {
     void send(question);
   }
 
+  function saveReport(asked: string, reply: Reply) {
+    const report = { id: crypto.randomUUID(), title: asked.slice(0, 120), markdown: reportMarkdown(asked, reply) };
+    storeReports([report, ...savedReports.filter((item) => item.markdown !== report.markdown)].slice(0, 15),
+      "Relatório salvo neste navegador.");
+  }
+
+  function storeReports(reports: SavedReport[], successMessage: string) {
+    try {
+      localStorage.setItem(reportStorageKey, JSON.stringify(reports));
+      setSavedReports(reports);
+      setSaveNotice(successMessage);
+    } catch {
+      setSaveNotice("O navegador não conseguiu salvar esta alteração.");
+    }
+  }
+
   return (
     <section className="research-chat" aria-labelledby="research-title">
       <header className="research-header">
@@ -110,6 +188,10 @@ export default function ResearchChat() {
           </button>
         )}
       </header>
+
+      <ol className="research-stages" aria-label="Etapas da pesquisa">
+        {stages.map((stage, index) => <li key={stage}><span>{index + 1}</span> {stage}</li>)}
+      </ol>
 
       <div className="research-layout">
         <div className="research-thread">
@@ -143,6 +225,25 @@ export default function ResearchChat() {
                           </a>
                         )}</p>;
                       })}
+                      {reply.audit && (
+                        <details className="research-evidence">
+                          <summary>Ver as cinco etapas desta pesquisa</summary>
+                          <ol className="research-trace">
+                            <li><strong>Planejar</strong><p>Termos da pergunta: {reply.searchTerms.join(", ") || "—"}</p>
+                              <p>Termos adicionais: {reply.audit.expandedTerms.join(", ") || "—"}</p></li>
+                            <li><strong>Buscar</strong><p>Busca {reply.audit.searchMode.toLowerCase()} em {reply.audit.indexed} registros. {reply.audit.matched} resultados candidatos.</p></li>
+                            <li><strong>Verificar</strong><p>{reply.audit.cited} referências únicas passaram pela conferência de identificador e endereço no catálogo local. A situação jurídica atual exige consulta ao INPI.</p></li>
+                            <li><strong>Analisar</strong>
+                              <ul>
+                                {reply.audit.comparisons.map((item) => <li key={item.feature}>
+                                  {item.feature} · {item.sourceNumbers.length ? item.sourceNumbers.map((number) => `[${number}]`).join(" ") : "Sem correspondência textual nas fontes exibidas"}
+                                </li>)}
+                              </ul>
+                            </li>
+                            <li><strong>Entregar</strong><p>{modeLabels[reply.mode]} com o recorte da consulta.</p></li>
+                          </ol>
+                        </details>
+                      )}
                       <details className="research-evidence">
                         <summary>Termos pesquisados e fontes ({reply.sources.length})</summary>
                         {reply.searchTerms.length > 0 && <p className="research-terms">{reply.searchTerms.join(" · ")}</p>}
@@ -160,12 +261,21 @@ export default function ResearchChat() {
                           <div className="research-source" key={source.number}>
                             <a href={source.url} target="_blank" rel="noreferrer">[{source.number}] {source.title} <ArrowUpRight size={13} /></a>
                             <small>{source.reference}</small>
+                            {source.classifications?.length > 0 && <small>IPC · {source.classifications.join(", ")}</small>}
                             <p>{source.summary}</p>
                             <small>Termos relacionados · {source.matchedTerms.join(", ")}</small>
                           </div>
                         ))}
                       </details>
                       <p className="research-scope">{reply.scope}</p>
+                      <div className="research-report-actions">
+                        <button className="text-button" type="button" onClick={() => downloadReport(reportMarkdown(asked, reply))}>
+                          Baixar relatório
+                        </button>
+                        <button className="text-button" type="button" onClick={() => saveReport(asked, reply)}>
+                          Salvar neste navegador
+                        </button>
+                      </div>
                     </article>
                   )}
                   {error && <p className="research-error" role="alert">{error}</p>}
@@ -188,6 +298,7 @@ export default function ResearchChat() {
               </button>
             </div>
           </form>
+          {saveNotice && <p className="research-save-notice" role="status">{saveNotice}</p>}
         </div>
 
         <aside className="guide-card research-guide">
@@ -198,6 +309,20 @@ export default function ResearchChat() {
           <a className="guide-link" href="https://www.gov.br/inpi/pt-br/servicos/patentes/guia-basico/busca-de-patentes" target="_blank" rel="noreferrer">
             Guia de busca do INPI <ArrowUpRight size={14} />
           </a>
+          {savedReports.length > 0 && <details className="research-evidence">
+            <summary>Pesquisas salvas ({savedReports.length})</summary>
+            <ul className="research-saved">
+              {savedReports.map((report) => <li key={report.id}>
+                <p>{report.title}</p>
+                <div className="research-report-actions">
+                  <button className="text-button" type="button" onClick={() => downloadReport(report.markdown)}>Baixar</button>
+                  <button className="text-button" type="button" onClick={() => storeReports(
+                    savedReports.filter((item) => item.id !== report.id), "Relatório removido deste navegador.",
+                  )}>Remover</button>
+                </div>
+              </li>)}
+            </ul>
+          </details>}
         </aside>
       </div>
     </section>

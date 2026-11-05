@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { ArrowUpRight, RotateCcw, Send, Sparkles } from "lucide-react";
+import {
+  ArrowUpRight,
+  Bookmark,
+  Download,
+  RotateCcw,
+  Send,
+  Sparkles,
+} from "lucide-react";
 import "./research-chat.css";
 
 type Source = {
@@ -62,7 +69,10 @@ function reportMarkdown(question: string, reply: Reply) {
     "## Evidências",
     ...reply.sources.flatMap((source) => [
       `### [${source.number}] ${source.title}`,
-      source.reference, source.url, source.summary, "",
+      source.reference,
+      source.url,
+      source.summary,
+      "",
     ]),
     "## Plano de busca",
     `Busca: ${reply.audit?.searchMode ?? "—"}`,
@@ -70,14 +80,18 @@ function reportMarkdown(question: string, reply: Reply) {
     `Expansão: ${reply.audit?.expandedTerms.join(", ") || "—"}`,
     "",
     "## Correspondências por característica",
-    ...(reply.audit?.comparisons.map((item) =>
-      `- ${item.feature}: ${item.sourceNumbers.map((number) => `[${number}]`).join(", ") || "Sem correspondência textual"}`) ?? []),
+    ...(reply.audit?.comparisons.map(
+      (item) =>
+        `- ${item.feature}: ${item.sourceNumbers.map((number) => `[${number}]`).join(", ") || "Sem correspondência textual"}`,
+    ) ?? []),
   ];
   return lines.join("\n");
 }
 
 function downloadReport(markdown: string) {
-  const url = URL.createObjectURL(new Blob([markdown], { type: "text/markdown;charset=utf-8" }));
+  const url = URL.createObjectURL(
+    new Blob([markdown], { type: "text/markdown;charset=utf-8" }),
+  );
   const link = document.createElement("a");
   link.href = url;
   link.download = "patente-ao-alcance-pesquisa.md";
@@ -91,22 +105,33 @@ export default function ResearchChat() {
   const [busy, setBusy] = useState(false);
   const [savedReports, setSavedReports] = useState<SavedReport[]>(() => {
     try {
-      const stored: unknown = JSON.parse(localStorage.getItem(reportStorageKey) ?? "[]");
-      return Array.isArray(stored) ? stored.filter((item): item is SavedReport =>
-        item && typeof item.id === "string" && typeof item.title === "string" && typeof item.markdown === "string",
-      ).slice(0, 15) : [];
+      const stored: unknown = JSON.parse(
+        localStorage.getItem(reportStorageKey) ?? "[]",
+      );
+      return Array.isArray(stored)
+        ? stored
+            .filter(
+              (item): item is SavedReport =>
+                item &&
+                typeof item.id === "string" &&
+                typeof item.title === "string" &&
+                typeof item.markdown === "string",
+            )
+            .slice(0, 15)
+        : [];
     } catch {
       return [];
     }
   });
   const [saveNotice, setSaveNotice] = useState("");
   const current = useRef<AbortController | null>(null);
-  const end = useRef<HTMLDivElement>(null);
+  const messages = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => () => current.current?.abort(), []);
   useEffect(() => {
-    if (turns.length) end.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    if (messages.current)
+      messages.current.scrollTop = messages.current.scrollHeight;
   }, [turns, busy]);
 
   async function send(value: string) {
@@ -114,7 +139,10 @@ export default function ResearchChat() {
     if (!message || current.current) return;
     const controller = new AbortController();
     current.current = controller;
-    const previousQuestions = turns.filter((turn) => turn.reply).slice(-3).map((turn) => turn.question);
+    const previousQuestions = turns
+      .filter((turn) => turn.reply)
+      .slice(-3)
+      .map((turn) => turn.question);
     setQuestion("");
     setBusy(true);
     setTurns((existing) => [...existing, { question: message }]);
@@ -127,13 +155,21 @@ export default function ResearchChat() {
       });
       if (!response.ok) throw new Error("Research request failed");
       const reply: Reply = await response.json();
-      if (!controller.signal.aborted) setTurns((existing) => [...existing.slice(0, -1), { question: message, reply }]);
+      if (!controller.signal.aborted)
+        setTurns((existing) => [
+          ...existing.slice(0, -1),
+          { question: message, reply },
+        ]);
     } catch {
       if (!controller.signal.aborted) {
-        setTurns((existing) => [...existing.slice(0, -1), {
-          question: message,
-          error: "Não foi possível consultar o assistente. Tente novamente quando a API estiver disponível.",
-        }]);
+        setTurns((existing) => [
+          ...existing.slice(0, -1),
+          {
+            question: message,
+            error:
+              "Não foi possível consultar o assistente. Tente novamente quando a API estiver disponível.",
+          },
+        ]);
         setQuestion(message);
       }
     } finally {
@@ -159,9 +195,18 @@ export default function ResearchChat() {
   }
 
   function saveReport(asked: string, reply: Reply) {
-    const report = { id: crypto.randomUUID(), title: asked.slice(0, 120), markdown: reportMarkdown(asked, reply) };
-    storeReports([report, ...savedReports.filter((item) => item.markdown !== report.markdown)].slice(0, 15),
-      "Relatório salvo neste navegador.");
+    const report = {
+      id: crypto.randomUUID(),
+      title: asked.slice(0, 120),
+      markdown: reportMarkdown(asked, reply),
+    };
+    storeReports(
+      [
+        report,
+        ...savedReports.filter((item) => item.markdown !== report.markdown),
+      ].slice(0, 15),
+      "Relatório salvo neste navegador.",
+    );
   }
 
   function storeReports(reports: SavedReport[], successMessage: string) {
@@ -178,9 +223,13 @@ export default function ResearchChat() {
     <section className="research-chat" aria-labelledby="research-title">
       <header className="research-header">
         <div>
-          <span className="step-label"><Sparkles size={14} /> ASSISTENTE DE PESQUISA</span>
+          <span className="demo-badge">
+            <Sparkles size={14} /> Assistente de pesquisa
+          </span>
           <h1 id="research-title">Chat com a IA</h1>
-          <p>Pesquise tecnologias e entenda o que os documentos do INPI mostram.</p>
+          <p>
+            Investigue tecnologias e acompanhe as evidências de cada resposta.
+          </p>
         </div>
         {turns.length > 0 && (
           <button className="text-button" type="button" onClick={reset}>
@@ -190,139 +239,306 @@ export default function ResearchChat() {
       </header>
 
       <ol className="research-stages" aria-label="Etapas da pesquisa">
-        {stages.map((stage, index) => <li key={stage}><span>{index + 1}</span> {stage}</li>)}
+        {stages.map((stage, index) => (
+          <li key={stage}>
+            <span>{index + 1}</span> {stage}
+          </li>
+        ))}
       </ol>
 
       <div className="research-layout">
         <div className="research-thread">
-          {turns.length === 0 ? (
-            <div className="research-welcome">
-              <div className="guide-icon"><Sparkles size={18} /></div>
-              <h2>Por onde você quer começar?</h2>
-              <p>Faça uma pergunta em português ou experimente uma consulta.</p>
-              <div className="research-examples">
-                {examples.map((example) => (
-                  <button key={example} type="button" onClick={() => void send(example)}>
-                    {example} <ArrowUpRight size={15} />
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="research-messages" role="log" aria-label="Conversa">
+          {turns.length > 0 && (
+            <div
+              className="research-messages"
+              ref={messages}
+              role="log"
+              aria-label="Conversa"
+            >
               {turns.map(({ question: asked, reply, error }, index) => (
                 <div className="research-turn" key={index}>
-                  <div className="research-question"><strong>Você</strong><p>{asked}</p></div>
+                  <div className="research-question">
+                    <strong>Você</strong>
+                    <p>{asked}</p>
+                  </div>
                   {reply && (
                     <article className="research-answer">
-                      <div className="step-label"><Sparkles size={14} /> {modeLabels[reply.mode]}</div>
+                      <div className="step-label">
+                        <Sparkles size={14} /> {modeLabels[reply.mode]}
+                      </div>
                       {reply.message && <p>{reply.message}</p>}
                       {reply.statements.map((statement, statementIndex) => {
-                        const source = reply.sources.find((item) => item.number === statement.source);
-                        return <p key={statementIndex}>{statement.text} {source && (
-                          <a href={source.url} target="_blank" rel="noreferrer" aria-label={`Fonte ${source.number}, ${source.title}`}>
-                            [{source.number}]
-                          </a>
-                        )}</p>;
+                        const source = reply.sources.find(
+                          (item) => item.number === statement.source,
+                        );
+                        return (
+                          <p key={statementIndex}>
+                            {statement.text}{" "}
+                            {source && (
+                              <a
+                                className="research-citation"
+                                href={source.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label={`Fonte ${source.number}, ${source.title}`}
+                              >
+                                {source.number}
+                              </a>
+                            )}
+                          </p>
+                        );
                       })}
                       {reply.audit && (
                         <details className="research-evidence">
                           <summary>Ver as cinco etapas desta pesquisa</summary>
                           <ol className="research-trace">
-                            <li><strong>Planejar</strong><p>Termos da pergunta: {reply.searchTerms.join(", ") || "—"}</p>
-                              <p>Termos adicionais: {reply.audit.expandedTerms.join(", ") || "—"}</p></li>
-                            <li><strong>Buscar</strong><p>Busca {reply.audit.searchMode.toLowerCase()} em {reply.audit.indexed} registros. {reply.audit.matched} resultados candidatos.</p></li>
-                            <li><strong>Verificar</strong><p>{reply.audit.cited} referências únicas passaram pela conferência de identificador e endereço no catálogo local. A situação jurídica atual exige consulta ao INPI.</p></li>
-                            <li><strong>Analisar</strong>
+                            <li>
+                              <strong>Planejar</strong>
+                              <p>
+                                Termos da pergunta:{" "}
+                                {reply.searchTerms.join(", ") || "—"}
+                              </p>
+                              <p>
+                                Termos adicionais:{" "}
+                                {reply.audit.expandedTerms.join(", ") || "—"}
+                              </p>
+                            </li>
+                            <li>
+                              <strong>Buscar</strong>
+                              <p>
+                                Busca {reply.audit.searchMode.toLowerCase()} em{" "}
+                                {reply.audit.indexed} registros.{" "}
+                                {reply.audit.matched} resultados candidatos.
+                              </p>
+                            </li>
+                            <li>
+                              <strong>Verificar</strong>
+                              <p>
+                                {reply.audit.cited} referências únicas passaram
+                                pela conferência de identificador e endereço no
+                                catálogo local. A situação jurídica atual exige
+                                consulta ao INPI.
+                              </p>
+                            </li>
+                            <li>
+                              <strong>Analisar</strong>
                               <ul>
-                                {reply.audit.comparisons.map((item) => <li key={item.feature}>
-                                  {item.feature} · {item.sourceNumbers.length ? item.sourceNumbers.map((number) => `[${number}]`).join(" ") : "Sem correspondência textual nas fontes exibidas"}
-                                </li>)}
+                                {reply.audit.comparisons.map((item) => (
+                                  <li key={item.feature}>
+                                    {item.feature} ·{" "}
+                                    {item.sourceNumbers.length
+                                      ? item.sourceNumbers
+                                          .map((number) => `[${number}]`)
+                                          .join(" ")
+                                      : "Sem correspondência textual nas fontes exibidas"}
+                                  </li>
+                                ))}
                               </ul>
                             </li>
-                            <li><strong>Entregar</strong><p>{modeLabels[reply.mode]} com o recorte da consulta.</p></li>
+                            <li>
+                              <strong>Entregar</strong>
+                              <p>
+                                {modeLabels[reply.mode]} com o recorte da
+                                consulta.
+                              </p>
+                            </li>
                           </ol>
                         </details>
                       )}
                       <details className="research-evidence">
-                        <summary>Termos pesquisados e fontes ({reply.sources.length})</summary>
-                        {reply.searchTerms.length > 0 && <p className="research-terms">{reply.searchTerms.join(" · ")}</p>}
+                        <summary>
+                          Termos pesquisados e fontes ({reply.sources.length})
+                        </summary>
+                        {reply.searchTerms.length > 0 && (
+                          <p className="research-terms">
+                            {reply.searchTerms.join(" · ")}
+                          </p>
+                        )}
                         {reply.sources.length > 0 && (
-                          <ul className="research-matches" aria-label="Correspondências por termo">
+                          <ul
+                            className="research-matches"
+                            aria-label="Correspondências por termo"
+                          >
                             {reply.searchTerms.map((term) => {
-                              const matches = reply.sources.filter((source) => source.matchedTerms.includes(term));
-                              return <li key={term}><strong>{term}</strong> · {matches.length
-                                ? matches.map((source) => <a key={source.number} href={source.url} target="_blank" rel="noreferrer">[{source.number}] </a>)
-                                : "Sem correspondência textual nas fontes exibidas"}</li>;
+                              const matches = reply.sources.filter((source) =>
+                                source.matchedTerms.includes(term),
+                              );
+                              return (
+                                <li key={term}>
+                                  <strong>{term}</strong> ·{" "}
+                                  {matches.length
+                                    ? matches.map((source) => (
+                                        <a
+                                          key={source.number}
+                                          href={source.url}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
+                                          [{source.number}]{" "}
+                                        </a>
+                                      ))
+                                    : "Sem correspondência textual nas fontes exibidas"}
+                                </li>
+                              );
                             })}
                           </ul>
                         )}
                         {reply.sources.map((source) => (
                           <div className="research-source" key={source.number}>
-                            <a href={source.url} target="_blank" rel="noreferrer">[{source.number}] {source.title} <ArrowUpRight size={13} /></a>
+                            <a
+                              href={source.url}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              [{source.number}] {source.title}{" "}
+                              <ArrowUpRight size={13} />
+                            </a>
                             <small>{source.reference}</small>
-                            {source.classifications?.length > 0 && <small>IPC · {source.classifications.join(", ")}</small>}
+                            {source.classifications?.length > 0 && (
+                              <small>
+                                IPC · {source.classifications.join(", ")}
+                              </small>
+                            )}
                             <p>{source.summary}</p>
-                            <small>Termos relacionados · {source.matchedTerms.join(", ")}</small>
+                            <small>
+                              Termos relacionados ·{" "}
+                              {source.matchedTerms.join(", ")}
+                            </small>
                           </div>
                         ))}
                       </details>
                       <p className="research-scope">{reply.scope}</p>
                       <div className="research-report-actions">
-                        <button className="text-button" type="button" onClick={() => downloadReport(reportMarkdown(asked, reply))}>
-                          Baixar relatório
+                        <button
+                          className="text-button"
+                          type="button"
+                          onClick={() =>
+                            downloadReport(reportMarkdown(asked, reply))
+                          }
+                        >
+                          <Download size={15} /> Baixar relatório
                         </button>
-                        <button className="text-button" type="button" onClick={() => saveReport(asked, reply)}>
-                          Salvar neste navegador
+                        <button
+                          className="text-button"
+                          type="button"
+                          onClick={() => saveReport(asked, reply)}
+                        >
+                          <Bookmark size={15} /> Salvar neste navegador
                         </button>
                       </div>
                     </article>
                   )}
-                  {error && <p className="research-error" role="alert">{error}</p>}
+                  {error && (
+                    <p className="research-error" role="alert">
+                      {error}
+                    </p>
+                  )}
                 </div>
               ))}
-              {busy && <p className="research-progress" role="status">Buscando evidências e preparando a resposta…</p>}
-              <div ref={end} />
+              {busy && (
+                <p className="research-progress" role="status">
+                  Buscando evidências e preparando a resposta…
+                </p>
+              )}
             </div>
           )}
 
           <form className="research-form" onSubmit={submit}>
             <label htmlFor="research-question">Sua pergunta</label>
-            <textarea id="research-question" ref={input} value={question}
-              onChange={(event) => setQuestion(event.target.value)} maxLength={2000}
-              rows={3} placeholder="Descreva a tecnologia ou pergunte sobre patentes…" />
+            <textarea
+              id="research-question"
+              ref={input}
+              value={question}
+              onChange={(event) => setQuestion(event.target.value)}
+              maxLength={2000}
+              rows={3}
+              placeholder="Descreva a tecnologia ou pergunte sobre patentes…"
+            />
             <div className="research-form-footer">
               <small>{question.length} / 2.000</small>
-              <button className="primary-button" type="submit" disabled={busy || !question.trim()}>
-                <Send size={16} /> Enviar
+              <button
+                className="primary-button"
+                type="submit"
+                disabled={busy || !question.trim()}
+              >
+                <Send size={16} /> {busy ? "Pesquisando…" : "Enviar"}
               </button>
             </div>
           </form>
-          {saveNotice && <p className="research-save-notice" role="status">{saveNotice}</p>}
+          {turns.length === 0 && (
+            <div className="research-welcome">
+              <h2>Experimente uma consulta</h2>
+              <div className="research-examples">
+                {examples.map((example) => (
+                  <button
+                    key={example}
+                    type="button"
+                    onClick={() => void send(example)}
+                  >
+                    {example} <ArrowUpRight size={15} />
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          {saveNotice && (
+            <p className="research-save-notice" role="status">
+              {saveNotice}
+            </p>
+          )}
         </div>
 
         <aside className="guide-card research-guide">
-          <span className="step-label">RECORTE DA PESQUISA</span>
-          <h3>Quais fontes entram na resposta?</h3>
-          <p>O chat consulta uma amostra local da Revista da Propriedade Industrial sobre captação de água e páginas educativas do INPI.</p>
-          <p>Use as referências para conferir os documentos. O chat não estima chance de concessão. Evite incluir detalhes confidenciais.</p>
-          <a className="guide-link" href="https://www.gov.br/inpi/pt-br/servicos/patentes/guia-basico/busca-de-patentes" target="_blank" rel="noreferrer">
+          <span className="step-label">Fontes e cobertura</span>
+          <h3>Catálogo piloto do INPI</h3>
+          <p>
+            A busca usa publicações selecionadas da RPI sobre captação de água e
+            guias do INPI. Abra as citações para conferir as fontes.
+          </p>
+          <p>Use exemplos públicos ao descrever uma tecnologia.</p>
+          <a
+            className="guide-link"
+            href="https://www.gov.br/inpi/pt-br/servicos/patentes/guia-basico/busca-de-patentes"
+            target="_blank"
+            rel="noreferrer"
+          >
             Guia de busca do INPI <ArrowUpRight size={14} />
           </a>
-          {savedReports.length > 0 && <details className="research-evidence">
-            <summary>Pesquisas salvas ({savedReports.length})</summary>
-            <ul className="research-saved">
-              {savedReports.map((report) => <li key={report.id}>
-                <p>{report.title}</p>
-                <div className="research-report-actions">
-                  <button className="text-button" type="button" onClick={() => downloadReport(report.markdown)}>Baixar</button>
-                  <button className="text-button" type="button" onClick={() => storeReports(
-                    savedReports.filter((item) => item.id !== report.id), "Relatório removido deste navegador.",
-                  )}>Remover</button>
-                </div>
-              </li>)}
-            </ul>
-          </details>}
+          {savedReports.length > 0 && (
+            <details className="research-evidence">
+              <summary>Pesquisas salvas ({savedReports.length})</summary>
+              <ul className="research-saved">
+                {savedReports.map((report) => (
+                  <li key={report.id}>
+                    <p>{report.title}</p>
+                    <div className="research-report-actions">
+                      <button
+                        className="text-button"
+                        type="button"
+                        onClick={() => downloadReport(report.markdown)}
+                      >
+                        Baixar
+                      </button>
+                      <button
+                        className="text-button"
+                        type="button"
+                        onClick={() =>
+                          storeReports(
+                            savedReports.filter(
+                              (item) => item.id !== report.id,
+                            ),
+                            "Relatório removido deste navegador.",
+                          )
+                        }
+                      >
+                        Remover
+                      </button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
         </aside>
       </div>
     </section>

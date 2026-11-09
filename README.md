@@ -8,7 +8,7 @@ A proposta é criar um assistente educativo de consulta e comparação. A pessoa
 
 - [Planejamento de 150 horas por integrante](docs/planejamento-do-projeto.md) — seis módulos, cronograma, tarefas, entregas, responsabilidades e modelo de registro.
 - [Visão do produto e arquitetura inicial](docs/visao-e-arquitetura-inicial.md) — objetivos, escopo do protótipo, fluxo do site, explicação da IA local, privacidade e evolução internacional.
-- [Guia para executar a estrutura inicial](README_DEV.md) — requisitos e comandos para abrir a interface e a API localmente.
+- [Guia para executar a estrutura inicial](fora-do-escopo.md) — requisitos e comandos para abrir a interface e a API localmente.
 
 ## Objetivos
 

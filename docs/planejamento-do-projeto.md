@@ -59,14 +59,6 @@ O problema e o vocabulário inicial orientam a busca no M2. Os modelos de fichas
 | Caio | 8 h Testar palavras-chave, sinônimos, classificação e documento-semente.<br>7 h Comparar INPI, PATENTSCOPE e Espacenet; Derwent apenas se houver licença.<br>6 h Selecionar pelo menos cinco famílias e preparar ficha de patente comentada. | 25 h |
 | Enzo | 8 h Implementar navegação e busca guiada por links externos.<br>7 h Montar componentes do panorama e modelo de vitrine.<br>6 h Integrar fichas e testar a consulta com alguém que não a redigiu. | 25 h |
 
-### Agenda de execução
-
-11 a 13/11 pesquisa e primeiras consultas; 17/11 integração; 18/11 teste de reprodução e congelamento do conjunto inicial.
-
-### Pacote de entrega
-
-Guia de busca v1; consultas exatas e fichas; conjunto inicial de cinco famílias; dados agregados; até três gráficos; portal navegável em versão de teste.
-
 ### Critérios de conclusão
 
 - As fichas guardam base, data, consulta, filtros, resultados e limitações; famílias não são contadas como documentos independentes.

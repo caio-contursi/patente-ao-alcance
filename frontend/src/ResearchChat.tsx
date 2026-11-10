@@ -99,6 +99,13 @@ function downloadReport(markdown: string) {
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
+// randomUUID só existe em HTTPS ou localhost; getRandomValues funciona em qualquer origem.
+function reportId() {
+  return Array.from(crypto.getRandomValues(new Uint8Array(16)), (byte) =>
+    byte.toString(16).padStart(2, "0"),
+  ).join("");
+}
+
 export default function ResearchChat() {
   const [question, setQuestion] = useState("");
   const [turns, setTurns] = useState<Turn[]>([]);
@@ -196,7 +203,7 @@ export default function ResearchChat() {
 
   function saveReport(asked: string, reply: Reply) {
     const report = {
-      id: crypto.randomUUID(),
+      id: reportId(),
       title: asked.slice(0, 120),
       markdown: reportMarkdown(asked, reply),
     };

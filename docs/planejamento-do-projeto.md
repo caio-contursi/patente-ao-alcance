@@ -4,10 +4,10 @@ Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  03/11/2026 a 23/12/2026
 
 | Parâmetro | Definição |
 | :-- | :-- |
-| Duração | 7 semanas completas e 10 h na última semana |
-| Carga-horária | 20h por semana para cada integrante. |
+| Duração | -|
+| Carga-horária | - |
 | Organização | 6 módulos; 25h/integrante |
-| Conclusão prevista | Quarta-feira, 23 de dezembro de 2026 |
+| Conclusão prevista | - |
 
 ## Objetivos
 
@@ -21,31 +21,7 @@ Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  03/11/2026 a 23/12/2026
 
 Uma turma-piloto, um desafio tecnológico comum e até seis atendimentos educativos. A referência de público é de 12 participantes externos convidados para as oficinas, com número efetivo registrado. São metas de planejamento, ajustáveis após a escuta e a simulação da clínica. O caso preferencial é captação e monitoramento de água de chuva para uso não potável; a simulação é a opção inicial de menor dependência de recursos.
 
-| Semana | Dias de trabalho em 2026 | Distribuição por módulo | Horas  por pessoa |
-| :-- | :-- | :-- | :-- |
-| 1 | 03, 04, 05 e 06/11 | M1 20 h | 20 |
-| 2 | 10, 11, 12 e 13/11 | M1 5 h + M2 15 h | 20 |
-| 3 | 17, 18, 19 e 23/11 | M2 10 h + M3 10 h | 20 |
-| 4 | 24, 25, 26 e 27/11 | M3 15 h + M4 5 h | 20 |
-| 5 | 01, 02, 03 e 04/12 | M4 20 h | 20 |
-| 6 | 08, 09, 10 e 11/12 | M5 20 h | 20 |
-| 7 | 15, 16, 17 e 18/12 | M5 5 h + M6 15 h | 20 |
-| 8 | 22 e 23/12 | M6 10 h | 10 |
-
-## Seis módulos com carga igual
-
-| Módulo e foco | Período | Entrega | Coordena |
-| :-- | :-- | :-- | :-- |
-| M1 Escuta e preparação | 03 a 10/11 | 10/11 | Pedro |
-| M2 Busca e dados | 11 a 18/11 | 18/11 | Caio |
-| M3 Portal e primeira oficina | 19 a 26/11 | 26/11 | Enzo |
-| M4 Análise e aplicação | 27/11 a 04/12 | 04/12 | Pedro |
-| M5 Experimento e novo gibi | 08 a 15/12 | 15/12 | Caio |
-| M6 Pitch e encerramento | 16 a 23/12 | 23/12 | Enzo |
-
-O plano mantém atividades de fechamento assíncronas em 22 e 23/12, sem exigir atendimento externo nesses dias.
-
-Obs: 20/11 é feriado.
+Plano incial --> contatar Alpha Junior (empresa júnior de BSI)
 
 ## Módulo 1 Escuta e preparação
 

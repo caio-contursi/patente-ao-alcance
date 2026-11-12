@@ -21,11 +21,9 @@ Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  13/11/2026 a 23/12/2026
 
 Uma turma-piloto, um desafio tecnológico comum e até seis atendimentos educativos. A referência de público é de 12 participantes externos convidados para as oficinas, com número efetivo registrado. São metas de planejamento, ajustáveis após a escuta e a simulação da clínica. O caso preferencial é captação e monitoramento de água de chuva para uso não potável; a simulação é a opção inicial de menor dependência de recursos.
 
-Plano inicial: contatar a Alpha Junior (empresa júnior de BSI) na abertura do M1.
+Plano inicial: contatar a Alpha Junior (empresa júnior de BSI) na abertura do M1. (Tarefa do Pedro - Responsável por fazer a ponte entre ambos os lados)
 
 ## Cronograma semanal
-
-As semanas começam na sexta-feira e vão até a quinta-feira seguinte. Nas semanas com cinco dias de trabalho, estão previstas 5 h por dia. Nas semanas 2 e 6, as 25 h são distribuídas em quatro dias de 6 h 15 min por integrante. O calendário exclui o feriado de 20/11 e concentra o fechamento até 23/12, antes da véspera de Natal. [Calendário federal de 2026](https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025)
 
 | Semana e módulo | Dias de trabalho em 2026 | Entrega | Coordena | Horas por integrante |
 | :-- | :-- | :-- | :-- | --: |
@@ -37,23 +35,24 @@ As semanas começam na sexta-feira e vão até a quinta-feira seguinte. Nas sema
 | 6 · M6 Pitch e encerramento | 18 e 21 a 23/12 | 23/12 | Enzo | 25 |
 | **Total** | **28 dias de trabalho** | | | **150** |
 
-Em cada módulo, as tarefas listadas somam 21 h por pessoa. As 4 h restantes são uma reserva individual para reunião semanal, validação, revisão cruzada, registro e fechamento.
 
 ## Módulo 1 Escuta e preparação
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
-| Pedro | 8 h Escutar representantes externos e sintetizar necessidades.<br>7 h Estudar o material de PI e definir público, requisitos e metas do piloto.<br>6 h Organizar contato com coordenação e NIT, recursos e decisões de escopo. | 25 h |
-| Caio | 8 h Inventariar os gibis da série 3, os quatro primeiros da série 6 e os jogos.<br>7 h Estudar os conceitos e preparar mapa de PI e glossário.<br>6 h Elaborar diagnóstico de cinco perguntas e ficha de discussão dos jogos. | 25 h |
-| Enzo | 8 h Desenhar estrutura e navegação do portal estático.<br>7 h Estudar as bases e definir campos, fontes e regra de contagem do panorama.<br>6 h Preparar repositório, modelos de fichas e alternativas de simulação. | 25 h |
+| Pedro | Escutar representantes externos e sintetizar necessidades.<br> Estudar o material de PI e definir público, requisitos e metas do piloto.<br> Organizar contato com coordenação e NIT, recursos e decisões de escopo. | 25 h |
+| Caio | Inventariar os gibis da série 3, os quatro primeiros da série 6 e os jogos.<br> Estudar os conceitos e preparar mapa de PI e glossário.<br> Elaborar diagnóstico de cinco perguntas e ficha de discussão dos jogos. | 25 h |
+| Enzo | Desenhar estrutura e navegação do portal estático.<br>Estudar as bases e definir campos, fontes e regra de contagem do panorama.<br>Preparar repositório, modelos de fichas e alternativas de simulação. | 25 h |
 
 ### Agenda de execução
 
-13/11 abertura, divisão de tarefas e contato inicial com a Alpha Junior. De 16 a 18/11, escuta e inventário. Em 19/11, validação do problema e fechamento.
+13/11 abertura, divisão de tarefas e contato com a Alpha Junior
+16 a 18/11 escuta e inventário
+19/11 validação do problema e fechamento.
 
 ### Pacote de entrega
 
-Plano de escopo; registro de escuta; inventário com uso e permissões; mapa de PI; diagnóstico; desenho do portal; lista de dependências com responsáveis.
+Plano de escopo; registro de escuta; inventário com uso e permissões; mapa de PI (Propriedade Intelectual); diagnóstico; desenho do portal; lista de dependências com responsáveis.
 
 ### Critérios de conclusão
 
@@ -71,13 +70,15 @@ O problema e o vocabulário inicial orientam a busca no M2. Os modelos de fichas
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
-| Pedro | 8 h Escrever consultas exploratórias para o conjunto público de patentes.<br>7 h Gerar agregados e arquivos de dados, com dicionário e data de extração.<br>6 h Conferir amostra, duplicidades, limites e até três gráficos do panorama. | 25 h |
-| Caio | 8 h Testar palavras-chave, sinônimos, classificação e documento-semente.<br>7 h Comparar INPI, PATENTSCOPE e Espacenet; Derwent apenas se houver licença.<br>6 h Selecionar pelo menos cinco famílias e preparar ficha de patente comentada. | 25 h |
-| Enzo | 8 h Implementar navegação e busca guiada por links externos.<br>7 h Montar componentes do panorama e modelo de vitrine.<br>6 h Integrar fichas e testar a consulta com alguém que não a redigiu. | 25 h |
+| Pedro | Escrever consultas exploratórias para o conjunto público de patentes.<br>Gerar agregados e arquivos de dados, com dicionário e data de extração.<br>Conferir amostra, duplicidades, limites e até três gráficos do panorama. | 25 h |
+| Caio | Testar palavras-chave, sinônimos, classificação e documento-semente.<br>Comparar INPI, PATENTSCOPE e Espacenet; Derwent apenas se houver licença.<br> Selecionar pelo menos cinco famílias e preparar ficha de patente comentada. | 25 h |
+| Enzo | Implementar navegação e busca guiada por links externos.<br> Montar componentes do panorama e modelo de vitrine.<br>Integrar fichas e testar a consulta com alguém que não a redigiu. | 25 h |
 
 ### Agenda de execução
 
-23 e 24/11 para pesquisa e primeiras consultas. Em 25/11, integração. Em 26/11, teste de reprodução e fechamento do conjunto inicial.
+23 e 24/11 para pesquisa e primeiras consultas
+25/11 integração
+26/11 teste de reprodução e fechamento do conjunto inicial.
 
 ### Pacote de entrega
 
@@ -99,13 +100,16 @@ Dados e consultas alimentam o portal do M3. As cinco famílias iniciais sustenta
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
-| Pedro | 8 h Integrar gráficos, método e fontes ao portal.<br>7 h Simular um atendimento, medir esforço e revisar formulário e relatório.<br>6 h Facilitar jogos na oficina e consolidar diagnóstico e dúvidas do público. | 25 h |
-| Caio | 8 h Preparar roteiro e slides e conduzir a Oficina 1 com gibis e jogos.<br>7 h Produzir guia educativo do percurso de depósito, com links oficiais revisados.<br>6 h Testar a linguagem do roteiro do novo gibi e preparar o primeiro vídeo curto. | 25 h |
-| Enzo | 8 h Finalizar portal, links, leitura no celular e navegação por teclado.<br>7 h Preparar até três fichas de tecnologias e encaminhar à validação do NIT.<br>6 h Organizar inscrições, divulgação autorizada, agenda e materiais acessíveis. | 25 h |
+| Pedro | Integrar gráficos, método e fontes ao portal.<br> Simular um atendimento, medir esforço e revisar formulário e relatório.<br> Facilitar jogos na oficina e consolidar diagnóstico e dúvidas do público. | 25 h |
+| Caio | Preparar roteiro e slides e conduzir a Oficina 1 com gibis e jogos.<br> Produzir guia educativo do percurso de depósito, com links oficiais revisados.<br> Testar a linguagem do roteiro do novo gibi e preparar o primeiro vídeo curto. | 25 h |
+| Enzo | Finalizar portal, links, leitura no celular e navegação por teclado.<br>Preparar até três fichas de tecnologias e encaminhar à validação do NIT.<br>Organizar inscrições, divulgação autorizada, agenda e materiais acessíveis. | 25 h |
 
 ### Agenda de execução
 
-27 e 30/11 para integração e simulação. Em 01/12, revisão da oficina. Em 02/12, Oficina 1 de 2 h. Em 03/12, publicação e fechamento.
+27 e 30/11 integração e simulação
+01/12 revisão da oficina
+02/12 Oficina 1 de 2 h
+03/12 publicação e fechamento.
 
 ### Pacote de entrega
 
@@ -127,13 +131,16 @@ A clínica abre apenas após a revisão do fluxo. As dúvidas da primeira oficin
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
-| Pedro | 10 h Relacionar requisitos do público, funções e alternativas de arquitetura.<br>7 h Preparar slides, facilitar a Oficina 2 e consolidar avaliação intermediária.<br>4 h Atuar no primeiro bloco da clínica, com busca, relatório e revisão. | 25 h |
-| Caio | 10 h Aprofundar duas famílias e construir matriz de reivindicações, desenhos e hipóteses.<br>7 h Apoiar buscas na oficina e executar exercício de IA conferido no original.<br>4 h Atuar no primeiro bloco da clínica, com busca, relatório e revisão. | 25 h |
-| Enzo | 10 h Documentar entradas, saídas e comportamento de um sistema ou componente acessível.<br>7 h Criar plano de testes, roteiro de reprodução e storyboard do gibi.<br>4 h Atuar no primeiro bloco da clínica, com busca, relatório e revisão. | 25 h |
+| Pedro | Relacionar requisitos do público, funções e alternativas de arquitetura.<br> Preparar slides, facilitar a Oficina 2 e consolidar avaliação intermediária.<br> Atuar no primeiro bloco da clínica, com busca, relatório e revisão. | 25 h |
+| Caio | Aprofundar duas famílias e construir matriz de reivindicações, desenhos e hipóteses.<br> Apoiar buscas na oficina e executar exercício de IA conferido no original.<br>Atuar no primeiro bloco da clínica, com busca, relatório e revisão. | 25 h |
+| Enzo |  Documentar entradas, saídas e comportamento de um sistema ou componente acessível.<br>Criar plano de testes, roteiro de reprodução e storyboard do gibi.<br>Atuar no primeiro bloco da clínica, com busca, relatório e revisão. | 25 h |
 
 ### Agenda de execução
 
-04/12 para o caso 1 da clínica. Em 07/12, Oficina 2 de 2 h. Em 08 e 09/12, casos 2 e 3 e revisão da matriz e dos testes. Em 10/12, entrega dos relatórios e aceite técnico.
+04/12 para o caso 1 da clínica
+07/12 Oficina 2 de 2 h
+08 e 09/12 casos 2 e 3 e revisão da matriz e dos testes
+10/12 entrega dos relatórios e aceite técnico.
 
 ### Pacote de entrega
 
@@ -155,13 +162,15 @@ O M5 recebe arquitetura, storyboard e plano de teste estabilizados. Questões qu
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
-| Pedro | 10 h Implementar simulação de nível, vazão e alertas, ou bancada aprovada.<br>7 h Executar cenários, registrar falhas e preparar dados e instruções de reprodução.<br>4 h Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
-| Caio | 10 h Revisar roteiro e conceitos do novo gibi a partir dos resultados reais.<br>7 h Diagramar ao menos quatro capítulos e testar compreensão com o público.<br>4 h Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
-| Enzo | 10 h Executar testes independentes e verificar requisitos com os dados observados.<br>7 h Produzir vídeo 2, preparar demonstração e registrar melhorias do portal e do gibi.<br>4 h Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
+| Pedro |  Implementar simulação de nível, vazão e alertas, ou bancada aprovada.<br> Executar cenários, registrar falhas e preparar dados e instruções de reprodução.<br>Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
+| Caio |  Revisar roteiro e conceitos do novo gibi a partir dos resultados reais.<br> Diagramar ao menos quatro capítulos e testar compreensão com o público.<br> Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
+| Enzo | Executar testes independentes e verificar requisitos com os dados observados.<br> Produzir vídeo 2, preparar demonstração e registrar melhorias do portal e do gibi.<br>Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
 
 ### Agenda de execução
 
-11, 14 e 15/12 para os casos 4, 5 e 6 da clínica. Construção e testes em 11 e 14 a 16/12. Em 16/12, teste de compreensão. Em 17/12, devolutivas, relatórios e fechamento.
+11, 14 e 15/12 para os casos 4, 5 e 6 da clínica. --> 11 e 14 a 16/12 construção e testes
+16/12, teste de compreensão
+17/12, devolutivas, relatórios e fechamento.
 
 ### Pacote de entrega
 
@@ -183,13 +192,16 @@ Os resultados sustentam o pitch do M6. O gibi e a demonstração serão refinado
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
-| Pedro | 8 h Consolidar resultados do experimento e roteiro da demonstração.<br>7 h Preparar narrativa, fala do pitch e respostas sobre contribuição técnica.<br>6 h Consolidar indicadores, relatório final e conferência de evidências de horas. | 25 h |
-| Caio | 8 h Finalizar gibi e guia após as devolutivas.<br>7 h Analisar uma chamada de hackathon e preparar checklist e formulário simulado.<br>6 h Revisar fontes, atribuições, permissões e instruções do kit para facilitadores. | 25 h |
-| Enzo | 8 h Produzir deck de 8 a 10 telas e integrar vídeo-demo curto.<br>7 h Organizar ensaio, Demo Day, perguntas e avaliação do público.<br>6 h Revisar portal, montar kit versionado e registrar guarda e manutenção. | 25 h |
+| Pedro | Consolidar resultados do experimento e roteiro da demonstração.<br>Preparar narrativa, fala do pitch e respostas sobre contribuição técnica.<br> Consolidar indicadores, relatório final e conferência de evidências de horas. | 25 h |
+| Caio | Finalizar gibi e guia após as devolutivas.<br>Analisar uma chamada de hackathon e preparar checklist e formulário simulado.<br> Revisar fontes, atribuições, permissões e instruções do kit para facilitadores. | 25 h |
+| Enzo |  Produzir deck de 8 a 10 telas e integrar vídeo-demo curto.<br> Organizar ensaio, Demo Day, perguntas e avaliação do público.<br> Revisar portal, montar kit versionado e registrar guarda e manutenção. | 25 h |
 
 ### Agenda de execução
 
-18/12 para o pacote de pitch e a chamada de estudo. Em 21/12, ensaio. Em 22/12, Demo Day de 1 h e devolutiva. Em 23/12, ajustes assíncronos, relatório e kit.
+18/12 para o pacote de pitch e a chamada de estudo
+21/12 ensaio
+22/12 Demo Day de 1 h e devolutiva
+23/12 ajustes assíncronos, relatório e kit.
 
 ### Pacote de entrega
 
@@ -235,12 +247,6 @@ Inscrição com descrição geral da necessidade → triagem e agenda → encont
 | Novo gibi | Roteiro e storyboard de 16 capítulos; pelo menos quatro capítulos diagramados. | Conteúdo cobre PI, busca, experimento e pitch. |
 | Comunicação e kit | Deck de 8 a 10 telas; fala de 3 min; vídeo-demo; formulário simulado; kit e relatório. | Banca em 22/12 e fechamento em 23/12. |
 
-A proposta refinada orienta portal, panorama, vitrine e clínica.
-
-A proposta aprimorada e o projeto original orientam a sequência pedagógica, as evidências, o experimento e a comunicação.
-
-O caso Solana será usado para aprender a ler um regulamento. Uma integração técnica com blockchain, uma candidatura real, mais atendimentos, um gibi inteiro diagramado ou uma nova plataforma não compõem as entregas mínimas. Qualquer ampliação exige substituir trabalho já previsto e recalcular a capacidade.
-
 ## Acompanhamento e avaliação
 
 ### Rotina de execução
@@ -269,8 +275,6 @@ Realizar uma reunião semanal de 30 min dentro da reserva do módulo e uma conve
 
 - O que ainda é preciso verificar antes de explorar comercialmente uma solução estudada?
 
-Registrar acertos por pergunta e quantidade de respondentes. Comparar respostas das mesmas pessoas quando possível; se os grupos forem diferentes, informar essa diferença. Não fixar previamente resultados de aprendizagem ou de impacto. Usar as dúvidas para melhorar o material e a facilitação.
-
 ## Recursos e decisões de execução
 
 Usar computadores, internet, armazenamento institucional, editor de documentos, ferramentas de formulário e reunião, repositório e hospedagem estática. A opção inicial do laboratório é uma simulação reproduzível; hardware depende de materiais, local e supervisão disponíveis. Impressões, componentes, custos de consulta e licenças precisam de levantamento e aprovação antes do gasto.
@@ -286,7 +290,7 @@ Usar computadores, internet, armazenamento institucional, editor de documentos, 
 | Dados pessoais ou informação de invenção | Trio e responsável institucional | Coletar só o necessário; separar registros reservados do kit público; definir acesso, guarda e descarte no fluxo institucional. |
 | Recesso ou impedimento de agenda | Responsável pelo módulo | Redistribuir dentro da mesma semana sem exceder 25 h individuais; se não for possível, mudar datas e manter a carga total. |
 
-### Revisão do conteúdo e da divulgação
+
 
 O conteúdo é educativo. A coordenação revisa o guia, o roteiro da clínica e os encaminhamentos; questões específicas de proteção, direitos ou licenciamento seguem para os canais habilitados. O experimento e o pitch usam informações cuja divulgação foi autorizada. Dados da clínica ficam fora do portal e das ferramentas externas de IA.
 
@@ -295,16 +299,10 @@ Para cada uso relevante de IA, registrar tarefa, fonte fornecida, saída, trecho
 ### Fontes operacionais para conferir durante a execução
 
 INPI Busca de patentes
-
 WIPO PATENTSCOPE
-
 EPO Espacenet
-
 Google BigQuery Conjuntos de dados públicos
-
 UNIRIO Pró Reitoria de Extensão e Cultura
-
 Solana Eventos para estudo de chamadas
-
 Calendário federal de feriados e pontos facultativos de 2026
 

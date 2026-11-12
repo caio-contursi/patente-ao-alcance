@@ -8,9 +8,9 @@ Plano de referência: 150 horas por integrante
 
 ## Para que serve este documento?
 
-Este documento transforma as ideias discutidas para o Patente ao Alcance em uma visão inicial do produto, um escopo viável para o primeiro protótipo e uma explicação acessível de como construir futuramente um assistente de consulta a patentes com tecnologias abertas, executado numa VPS externa. A proposta usa Java no backend e TypeScript no frontend.
+Este documento transforma as ideias discutidas para o Patente ao Alcance em uma visão inicial do produto, um escopo viável para o primeiro protótipo. A proposta usa Java no backend e TypeScript no frontend.
 
-## Limites e linguagem responsável
+## Limites e linguagem responsável:
 
 O sistema não será um escritório de patentes, não substituirá um agente da propriedade industrial ou advogado e não emitirá uma decisão oficial sobre patenteabilidade. Uma resposta automatizada não deve afirmar que uma invenção “é patenteável”, “está garantida” ou “será concedida”.
 
@@ -24,26 +24,21 @@ A busca inicial pode mostrar padrões de decisões públicas anteriores, quando 
 
 - **Documentos e dados:** publicações, metadados e, quando disponíveis e permitidos, decisões e trechos relevantes.
 - **Índice de busca:** estrutura que permite localizar documentos por palavras, números, nomes, classificações e conteúdo.
-- **Embeddings:** representações numéricas que ajudam o sistema a encontrar textos com significado parecido, mesmo que usem palavras diferentes.
 - **Busca híbrida:** combinação de busca por termos exatos e busca semântica. Isso é útil porque números, nomes e termos técnicos exigem correspondência literal, enquanto descrições de ideias podem usar vocabulário diferente.
-- **RAG (geração apoiada por recuperação):** antes de responder, o sistema busca documentos relevantes e fornece trechos e metadados ao modelo. O modelo organiza uma explicação usando esse material. As citações devem apontar para as fontes recuperadas, e a aplicação deve evitar responder como se tivesse visto a base inteira.
-- **Modelo de linguagem local:** componente que interpreta a pergunta e redige uma resposta a partir do contexto fornecido. Ele não deve inventar fonte, número de patente ou conclusão legal.
-- **API Java:** coordena autenticação, busca, filtros, regras, chamadas ao índice e ao modelo, limites de uso e resposta ao site.
 - **Frontend TypeScript:** apresenta formulário, resultados, trechos, fontes, avisos e feedback.
 
-## Arquitetura inicial recomendada
+## Arquitetura inicial recomendada:
 
-- **Frontend:** TypeScript, mantendo a tecnologia já usada pelo site. Se ainda não houver aplicação, React é uma opção comum, mas a decisão deve considerar o projeto existente.
+- **Frontend:** TypeScript, mantendo a tecnologia já usada pelo site. Se ainda não houver aplicação, React é uma opção.
 - **Backend:** Java com Spring Boot para API HTTP, validação, regras do produto e integração com os demais serviços.
 - **Banco relacional:** PostgreSQL para metadados, usuários, consultas e estado do sistema.
 - **Busca textual e filtros:** iniciar com PostgreSQL ou um mecanismo de busca dedicado, conforme volume e necessidade de ranking.
-- **Busca semântica:** embeddings multilíngues e índice vetorial, por exemplo pgvector junto ao PostgreSQL. A qualidade em português técnico deve ser medida com consultas reais.
-- **Modelo de linguagem:** modelo de pesos abertos executado localmente; avaliar Ollama como opção de experimentação. Verificar licença, RAM, velocidade, suporte a português e qualidade de respostas com contexto.
+- **Busca semântica:** embeddings multilíngues e índice vetorial, por exemplo pgvector junto ao PostgreSQL. 
 - **Arquivos e extração:** armazenamento organizado para documentos permitidos, com ferramentas para extrair PDF e OCR apenas quando necessário.
 - **Observabilidade:** logs sem texto confidencial por padrão, métricas de latência, erros, custo de recursos e versão dos dados/modelos.
-- **Implantação:** serviços isolados na VPS, acesso interno entre API e modelo, HTTPS na borda, backups e atualização controlada.
+- **Implantação:** serviços isolados na VPS, HTTPS na borda, backups e atualização controlada.
   
-## Dados brasileiros e contexto internacional
+## Dados brasileiros e contexto internacional:
 
 ### Brasil como ponto de partida
 
@@ -57,20 +52,16 @@ Incluir o mundo inteiro no primeiro ciclo não é viável. As bases têm formato
 
 Para a entrega até 23 de dezembro de 2026, a recomendação é manter a indexação e a demonstração concentradas no Brasil e fazer, no máximo, uma prova de conceito de consulta internacional. Uma cobertura internacional real pode ser planejada como etapa posterior, país por país e com fonte e política de dados definidas.
 
-## Privacidade, segurança e confiança
+## Privacidade, segurança e confiança?
 
-Descrições de invenções podem conter informação sensível. Mesmo em um protótipo acadêmico, a interface deve alertar a pessoa para não inserir detalhes confidenciais antes de entender como os dados são tratados. Como padrão inicial:
 
 - Não registrar o texto integral da invenção em logs técnicos.
-- Não reutilizar consultas para treinar modelos sem consentimento explícito e finalidade documentada.
 - Definir prazo e processo de exclusão de consultas armazenadas.
 - Proteger o site com HTTPS, validação, limitação de requisições e controle de acesso.
-- Manter o serviço do modelo acessível apenas ao backend e à rede privada.
-- Registrar versões das bases e modelos para que os resultados possam ser reproduzidos.
 - Mostrar fontes, datas de acesso, filtros e limitações da busca.
 - Tratar o sistema como ferramenta educacional e informativa; encaminhar questões jurídicas específicas a profissional qualificado.
 
-## Integração com o site
+## Integração com o site:
 
 O backend Java deve oferecer endpoints claros que o frontend TypeScript possa chamar. Um contrato inicial pode incluir:
 
@@ -80,25 +71,19 @@ O backend Java deve oferecer endpoints claros que o frontend TypeScript possa ch
 - POST /api/feedback: registra avaliação simples sobre relevância, fonte ou explicação, sem guardar a descrição original por padrão.
 - GET /api/health: informa disponibilidade dos componentes sem expor detalhes internos.
 
-A interface deve separar visualmente evidência documental da explicação gerada. Cada referência da resposta deve poder ser aberta. Se a recuperação não encontrar apoio suficiente, o sistema deve dizer isso e oferecer formas de reformular a busca.
-
-## Como avaliar o protótipo
+## Como avaliar o protótipo?
 
 A demonstração deve ser julgada por critérios observáveis:
 
 - Uma consulta retorna documentos com identificadores e fontes oficiais ou claramente identificadas.
-- A busca oferece termos exatos e semelhança semântica, quando a camada estiver disponível.
 - O usuário consegue entender por que cada documento apareceu.
-- As afirmações da explicação apontam para evidências que a equipe pode conferir.
-- O sistema declara quando a base ou a evidência não é suficiente.
 - O protótipo não afirma que uma invenção é elegível ou que será concedida.
 - A equipe registra falsos positivos, documentos relevantes que não apareceram, latência e recursos consumidos.
 - O comportamento foi experimentado com consultas de teste documentadas.
 - Os dados e modelos usados têm origem e condições de uso registradas.
 
-## Perguntas que a equipe precisa resolver no início
+## Perguntas para serem respondidas antes de começar:
 
-1. Quais recursos e limites exatos tem a VPS (CPU, RAM, disco, GPU/VRAM, sistema operacional e tráfego)?
 2. Qual é a estrutura e tecnologia atual do site?
 3. Qual será a primeira área técnica piloto para as buscas de demonstração?
 4. Quais dados e interfaces do INPI podem ser usados no formato pretendido, e com que frequência serão atualizados?
@@ -110,8 +95,6 @@ A demonstração deve ser julgada por critérios observáveis:
 
 ## Fontes oficiais e técnicas para consulta
 
-As fontes abaixo orientam a definição e devem ser novamente conferidas quando a equipe iniciar a implementação, pois regras de acesso, interfaces e serviços podem mudar.
-
 - Lei nº 9.279/1996 — Lei da Propriedade Industrial, Portal da Legislação, Planalto: https://www.planalto.gov.br/ccivil_03/leis/l9279.htm
 - INPI — Você quer patentear só no Brasil ou em outros países também?: https://www.gov.br/inpi/pt-br/servicos/patentes/tutorial-de-deposito/voce-quer-patentear-so-no-brasil-ou-em-outros-paises-tambem-1
 - INPI — Acessos às bases de pesquisas e busca terceirizada: https://www.gov.br/inpi/pt-br/servicos/patentes/busca-terceirizada/acessos-as-bases-de-pesquisas/
@@ -119,6 +102,5 @@ As fontes abaixo orientam a definição e devem ser novamente conferidas quando 
 - EPO — Open Patent Services (OPS), API e condições de acesso: https://www.epo.org/en/searching-for-patents/data/web-services/ops
 - WIPO — PATENTSCOPE FAQs e limites de automação: https://www.wipo.int/en/web/patentscope/faqs_patentscope
 - Spring Boot — documentação oficial: https://docs.spring.io/spring-boot/index.html
-- Ollama — documentação oficial para execução local de modelos: https://docs.ollama.com/
 - PostgreSQL — documentação oficial: https://www.postgresql.org/docs/
 - pgvector — extensão vetorial para PostgreSQL: https://github.com/pgvector/pgvector

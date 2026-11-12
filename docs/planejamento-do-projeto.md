@@ -1,13 +1,13 @@
 # Patente ao Alcance — Planejamento de 150 horas por integrante
 
-Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  03/11/2026 a 23/12/2026
+Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  13/11/2026 a 23/12/2026
 
 | Parâmetro | Definição |
 | :-- | :-- |
-| Duração | -|
-| Carga-horária | - |
-| Organização | 6 módulos; 25h/integrante |
-| Conclusão prevista | - |
+| Duração | 6 semanas de execução |
+| Carga horária | 25 h semanais por integrante, 150 h por integrante e 450 h para a equipe |
+| Organização | 6 módulos de 25 h por integrante, um por semana |
+| Conclusão prevista | Quarta-feira, 23 de dezembro de 2026 |
 
 ## Objetivos
 
@@ -21,7 +21,23 @@ Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  03/11/2026 a 23/12/2026
 
 Uma turma-piloto, um desafio tecnológico comum e até seis atendimentos educativos. A referência de público é de 12 participantes externos convidados para as oficinas, com número efetivo registrado. São metas de planejamento, ajustáveis após a escuta e a simulação da clínica. O caso preferencial é captação e monitoramento de água de chuva para uso não potável; a simulação é a opção inicial de menor dependência de recursos.
 
-Plano incial --> contatar Alpha Junior (empresa júnior de BSI)
+Plano inicial: contatar a Alpha Junior (empresa júnior de BSI) na abertura do M1.
+
+## Cronograma semanal
+
+As semanas começam na sexta-feira e vão até a quinta-feira seguinte. Nas semanas com cinco dias de trabalho, estão previstas 5 h por dia. Nas semanas 2 e 6, as 25 h são distribuídas em quatro dias de 6 h 15 min por integrante. O calendário exclui o feriado de 20/11 e concentra o fechamento até 23/12, antes da véspera de Natal. [Calendário federal de 2026](https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025)
+
+| Semana e módulo | Dias de trabalho em 2026 | Entrega | Coordena | Horas por integrante |
+| :-- | :-- | :-- | :-- | --: |
+| 1 · M1 Escuta e preparação | 13 e 16 a 19/11 | 19/11 | Pedro | 25 |
+| 2 · M2 Busca e dados | 23 a 26/11 | 26/11 | Caio | 25 |
+| 3 · M3 Portal e primeira oficina | 27 e 30/11, 01 a 03/12 | 03/12 | Enzo | 25 |
+| 4 · M4 Análise e aplicação | 04 e 07 a 10/12 | 10/12 | Pedro | 25 |
+| 5 · M5 Experimento e novo gibi | 11 e 14 a 17/12 | 17/12 | Caio | 25 |
+| 6 · M6 Pitch e encerramento | 18 e 21 a 23/12 | 23/12 | Enzo | 25 |
+| **Total** | **28 dias de trabalho** | | | **150** |
+
+Em cada módulo, as tarefas listadas somam 21 h por pessoa. As 4 h restantes são uma reserva individual para reunião semanal, validação, revisão cruzada, registro e fechamento.
 
 ## Módulo 1 Escuta e preparação
 
@@ -33,7 +49,7 @@ Plano incial --> contatar Alpha Junior (empresa júnior de BSI)
 
 ### Agenda de execução
 
-03/11 abertura e distribuição; 04 a 06/11 escuta e inventário; 10/11 validação do problema e fechamento do módulo.
+13/11 abertura, divisão de tarefas e contato inicial com a Alpha Junior. De 16 a 18/11, escuta e inventário. Em 19/11, validação do problema e fechamento.
 
 ### Pacote de entrega
 
@@ -59,6 +75,14 @@ O problema e o vocabulário inicial orientam a busca no M2. Os modelos de fichas
 | Caio | 8 h Testar palavras-chave, sinônimos, classificação e documento-semente.<br>7 h Comparar INPI, PATENTSCOPE e Espacenet; Derwent apenas se houver licença.<br>6 h Selecionar pelo menos cinco famílias e preparar ficha de patente comentada. | 25 h |
 | Enzo | 8 h Implementar navegação e busca guiada por links externos.<br>7 h Montar componentes do panorama e modelo de vitrine.<br>6 h Integrar fichas e testar a consulta com alguém que não a redigiu. | 25 h |
 
+### Agenda de execução
+
+23 e 24/11 para pesquisa e primeiras consultas. Em 25/11, integração. Em 26/11, teste de reprodução e fechamento do conjunto inicial.
+
+### Pacote de entrega
+
+Guia de busca v1, consultas registradas, fichas de pelo menos cinco famílias, dados agregados, até três gráficos e portal navegável em versão de teste.
+
 ### Critérios de conclusão
 
 - As fichas guardam base, data, consulta, filtros, resultados e limitações; famílias não são contadas como documentos independentes.
@@ -81,7 +105,7 @@ Dados e consultas alimentam o portal do M3. As cinco famílias iniciais sustenta
 
 ### Agenda de execução
 
-19 e 23/11 integração e simulação; 24/11 revisão da oficina; 25/11 Oficina 1 de 2 h; 26/11 publicação e fechamento. O dia 23 substitui 20/11.
+27 e 30/11 para integração e simulação. Em 01/12, revisão da oficina. Em 02/12, Oficina 1 de 2 h. Em 03/12, publicação e fechamento.
 
 ### Pacote de entrega
 
@@ -109,7 +133,7 @@ A clínica abre apenas após a revisão do fluxo. As dúvidas da primeira oficin
 
 ### Agenda de execução
 
-27/11 caso 1 da clínica; 01/12 Oficina 2 de 2 h e caso 2; 02/12 caso 3; 03/12 revisão da matriz e dos testes; 04/12 relatórios e aceite técnico.
+04/12 para o caso 1 da clínica. Em 07/12, Oficina 2 de 2 h. Em 08 e 09/12, casos 2 e 3 e revisão da matriz e dos testes. Em 10/12, entrega dos relatórios e aceite técnico.
 
 ### Pacote de entrega
 
@@ -137,7 +161,7 @@ O M5 recebe arquitetura, storyboard e plano de teste estabilizados. Questões qu
 
 ### Agenda de execução
 
-08, 09 e 10/12 casos 4, 5 e 6 da clínica; 08 a 11/12 construção e testes; 11/12 teste de compreensão; 15/12 devolutivas, relatórios e fechamento.
+11, 14 e 15/12 para os casos 4, 5 e 6 da clínica. Construção e testes em 11 e 14 a 16/12. Em 16/12, teste de compreensão. Em 17/12, devolutivas, relatórios e fechamento.
 
 ### Pacote de entrega
 
@@ -149,7 +173,7 @@ Experimento reproduzível; diário e resultados; relatórios dos casos 4 a 6; ro
 
 - Os quatro capítulos diagramados cobrem problema e PI, busca, experimento e pitch; a experiência completa permanece no roteiro e storyboard.
 
-- O público testa a compreensão do material e sua contribuição gera ajustes registrados. Os relatórios da clínica estão concluídos até 15/12.
+- O público testa a compreensão do material e sua contribuição gera ajustes registrados. Os relatórios da clínica estão concluídos até 17/12.
 
 ### Passagem para a próxima etapa
 
@@ -165,7 +189,7 @@ Os resultados sustentam o pitch do M6. O gibi e a demonstração serão refinado
 
 ### Agenda de execução
 
-16/12 pacote de pitch e chamada de estudo; 17/12 ensaio; 18/12 Demo Day de 1 h e devolutiva; 22 e 23/12 ajustes assíncronos, relatório e kit.
+18/12 para o pacote de pitch e a chamada de estudo. Em 21/12, ensaio. Em 22/12, Demo Day de 1 h e devolutiva. Em 23/12, ajustes assíncronos, relatório e kit.
 
 ### Pacote de entrega
 
@@ -191,12 +215,12 @@ Inscrição com descrição geral da necessidade → triagem e agenda → encont
 
 | Caso | Atendimento | Dupla | Redige | Revisa | Relatório até |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| 1 | 27/11 | Pedro e Caio | Pedro | Caio | 04/12 |
-| 2 | 01/12 | Caio e Enzo | Caio | Enzo | 04/12 |
-| 3 | 02/12 | Enzo e Pedro | Enzo | Pedro | 04/12 |
-| 4 | 08/12 | Pedro e Caio | Pedro | Caio | 15/12 |
-| 5 | 09/12 | Caio e Enzo | Caio | Enzo | 15/12 |
-| 6 | 10/12 | Enzo e Pedro | Enzo | Pedro | 15/12 |
+| 1 | 04/12 | Pedro e Caio | Pedro | Caio | 10/12 |
+| 2 | 08/12 | Caio e Enzo | Caio | Enzo | 10/12 |
+| 3 | 09/12 | Enzo e Pedro | Enzo | Pedro | 10/12 |
+| 4 | 11/12 | Pedro e Caio | Pedro | Caio | 17/12 |
+| 5 | 14/12 | Caio e Enzo | Caio | Enzo | 17/12 |
+| 6 | 15/12 | Enzo e Pedro | Enzo | Pedro | 17/12 |
 
 ## Entregas mínimas e limites de escopo
 
@@ -209,7 +233,7 @@ Inscrição com descrição geral da necessidade → triagem e agenda → encont
 | Clínica | Até seis casos com pesquisa indicativa e próximo passo educativo. | Relatórios em até sete dias corridos. |
 | Análise e experimento | Levantamento de cinco famílias, análise detalhada de duas e teste de uma hipótese. | Matriz, dados, falhas e procedimento reproduzível. |
 | Novo gibi | Roteiro e storyboard de 16 capítulos; pelo menos quatro capítulos diagramados. | Conteúdo cobre PI, busca, experimento e pitch. |
-| Comunicação e kit | Deck de 8 a 10 telas; fala de 3 min; vídeo-demo; formulário simulado; kit e relatório. | Banca em 18/12 e fechamento em 23/12. |
+| Comunicação e kit | Deck de 8 a 10 telas; fala de 3 min; vídeo-demo; formulário simulado; kit e relatório. | Banca em 22/12 e fechamento em 23/12. |
 
 A proposta refinada orienta portal, panorama, vitrine e clínica.
 
@@ -227,11 +251,11 @@ Realizar uma reunião semanal de 30 min dentro da reserva do módulo e uma conve
 | :-- | :-- | :-- |
 | Carga horária | Horas por pessoa, tarefa e evidência; comparar previsto e realizado. | Diário e fechamento de cada módulo |
 | Participação externa | Convidados, presentes e respondentes; número de casos atendidos. | Escuta, oficinas, clínica e mostra |
-| Aprendizagem | Aplicar as mesmas cinco perguntas antes da Oficina 1 e depois da Oficina 2. | 25/11 e 01/12 |
+| Aprendizagem | Aplicar as mesmas cinco perguntas antes da Oficina 1 e depois da Oficina 2. | 02/12 e 07/12 |
 | Busca reproduzível | Repetição de uma consulta por outro integrante e registro de diferenças. | M2 e M4 |
 | Utilidade e compreensão | Perguntar o que ajudou, o que ficou confuso e que mudança é necessária. | Oficinas, gibi, clínica e Demo Day |
 | Qualidade do experimento | Comparar resultado esperado e observado, falhas e possibilidade de repetir. | M5 |
-| Comunicação | Banca avalia busca, análise, documentação, clareza, limites e contribuição da equipe. | 18/12 |
+| Comunicação | Banca avalia busca, análise, documentação, clareza, limites e contribuição da equipe. | 22/12 |
 
 ### Diagnóstico de cinco perguntas
 
@@ -255,12 +279,12 @@ Usar computadores, internet, armazenamento institucional, editor de documentos, 
 | :-- | :-- | :-- |
 | Orientação e comprovação das horas | Pedro com coordenação | No M1, confirmar vínculo institucional, registros e critérios de comprovação. Manter diário individual e entregas. |
 | Permissão para gibis e jogos | Caio com titulares e coordenação | Solicitar no M1; até M3, usar apenas materiais autorizados ou atividades originais com os mesmos objetivos. |
-| Fichas e retorno do NIT | Enzo com contato institucional | Solicitar no M1 e acompanhar no M3. Sem liberação até 26/11, manter fichas reservadas e publicar só o canal institucional. |
+| Fichas e retorno do NIT | Enzo com contato institucional | Solicitar no M1 e acompanhar no M3. Sem liberação até 03/12, manter fichas reservadas e publicar só o canal institucional. |
 | Custo de consulta e indisponibilidade de base | Pedro e Enzo | Estimar antes de executar; usar amostra ou agregados públicos documentados se não houver verba. Derwent é opcional. |
 | Poucas inscrições ou casos demorados | Enzo na agenda e trio na execução | Rever divulgação e medir esforço no M3; limitar casos antes de aceitar inscrições, mantendo a devolutiva dos já recebidos. |
 | Falha ou atraso do experimento | Pedro e orientação técnica | Preservar pergunta e plano de teste; usar simulação, registrar limitação e comunicar resultado negativo quando ocorrer. |
 | Dados pessoais ou informação de invenção | Trio e responsável institucional | Coletar só o necessário; separar registros reservados do kit público; definir acesso, guarda e descarte no fluxo institucional. |
-| Recesso ou impedimento de agenda | Responsável pelo módulo | Redistribuir dentro da mesma semana sem exceder 20 h individuais; se não for possível, mudar datas e manter a carga total. |
+| Recesso ou impedimento de agenda | Responsável pelo módulo | Redistribuir dentro da mesma semana sem exceder 25 h individuais; se não for possível, mudar datas e manter a carga total. |
 
 ### Revisão do conteúdo e da divulgação
 

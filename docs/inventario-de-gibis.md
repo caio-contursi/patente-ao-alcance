@@ -1,8 +1,6 @@
 # Inventário de gibis e jogos para o Patente ao Alcance
 
-Triagem de 9 de novembro de 2026. A seleção usa a proposta refinada v2, especialmente as seções 6.3 a 6.8, e adota os módulos e entregas do [planejamento de execução](planejamento-do-projeto.md). A proposta e o planejamento registram cronogramas diferentes.
-
-Consultei o índice das 17 séries, a [bibliografia da coordenação](https://almanaquesdacomputacao.com.br/gutanunes/publication.html), o [catálogo da Série 3](https://almanaquesdacomputacao.com.br/serie3baixa.html) e o [catálogo da Série 6](https://almanaquesdacomputacao.com.br/serie6baixa.html). Cruzei títulos, fichas e trechos acessíveis com as entregas. Parte dos PDFs diretos apresentou falhas de acesso. Nesses casos, a classificação se apoia na bibliografia, em fichas institucionais ou em publicações dos autores. As regras abaixo registram apenas detalhes confirmados.
+Material para auxiliar no andamento do projeto.
 
 ## Série 3 — Propriedade Intelectual
 
@@ -80,15 +78,3 @@ Como formato de avaliação, o [guia S12V6](https://almanaquesdacomputacao.com.b
 | [S9V4, V8, V10–11 — Feedback, análise de tarefas e prototipagem](https://almanaquesdacomputacao.com.br/serie9baixa.html) | M3/M5. Planejar tarefas para testar se uma pessoa consegue buscar, abrir a fonte e identificar a limitação do resultado. |
 | [S12V5 — Guia de Robótica com Sucata](https://almanaquesdacomputacao.com.br/gutanunes/publications/serie12/S12V5small.pdf) e [S13V2 — Robótica com Sucata](https://almanaquesdacomputacao.com.br/gutanunes/publications/serie13/S13V2small.pdf) | M5. Referência complementar caso a equipe opte por bancada. As medições de nível e vazão e o registro de falhas vêm do plano do Patente ao Alcance. |
 
-## Como aproveitar no novo gibi
-
-| Bloco do roteiro | Referências e atividade |
-| --- | --- |
-| Cap. 1–3 · Problema e PI | S3V1 e S3V20. Um pequeno negócio descreve seu problema e a turma separa nome, criação técnica e conteúdo original. |
-| Cap. 4–7 · Busca e leitura | S6V1–4 e S12V14. Mostrar a transformação de um problema em consulta, identificar a família e localizar uma reivindicação, o desenho e a fonte. |
-| Cap. 8–12 · IA e experimento | S2V5, S7V7 e S6V7–10. Colocar lado a lado uma afirmação da IA e o trecho original. Ligar reivindicação, evidência, hipótese, alternativa, nível e vazão em uma matriz. |
-| Cap. 13–16 · Pitch e Demo Day | Usar o roteiro de pitch da proposta e os resultados reais ou simulados do piloto. Os almanaques selecionados dão contexto de PI e comunicação, enquanto as regras da chamada são conferidas no regulamento da edição estudada. |
-
-## Uso e permissões
-
-O site exibe [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.pt-br). Há edições com indicação diferente, como o guia S12V14, que traz CC BY-NC-SA. Para cada material selecionado, registrar a licença no próprio PDF, o crédito, o formato pretendido, a necessidade de impressão ou adaptação e a aprovação prevista no plano. Disponibilidade para consulta e permissão específica da coordenação ou dos titulares são registros distintos. Priorizar links para as edições originais no portal e atividades, personagens e ilustrações próprios no novo gibi. Os tempos de aplicação e a disponibilidade física do acervo ficam para o ensaio com a equipe.

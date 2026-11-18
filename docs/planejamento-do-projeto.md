@@ -1,13 +1,14 @@
-# Patente ao Alcance — Planejamento de 150 horas por integrante
+# Patente ao Alcance PARTE 1 - Preparação do ambiente e implementação de testes
 
 Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  13/11/2026 a 23/12/2026
+Coordenador do planejamento --> Caio Contursi
 
 | Parâmetro | Definição |
 | :-- | :-- |
 | Duração | 6 semanas de execução |
-| Carga horária | 25 h semanais por integrante, 150 h por integrante e 450 h para a equipe |
+| Carga horária | 25 h semanais por integrante, 150 h por integrante |
 | Organização | 6 módulos de 25 h por integrante, um por semana |
-| Conclusão prevista | Quarta-feira, 23 de dezembro de 2026 |
+| Conclusão prevista | 27.2 (segundo semestre de 2027) |
 
 ## Objetivos
 
@@ -25,53 +26,42 @@ Plano inicial: contatar a Alpha Junior (empresa júnior de BSI) na abertura do M
 
 ## Cronograma semanal
 
-| Semana e módulo | Dias de trabalho em 2026 | Entrega | Coordena | Horas por integrante |
+| Semana e módulo | Dias de trabalho em 2026 | Entrega | Horas por integrante |
 | :-- | :-- | :-- | :-- | --: |
-| M1 Estudo e preparação do ambiente | 13 e 16 a 19/11 | 19/11 | Pedro | 25 |
+| M1 Estudo e preparação do ambiente | 13 e 16 a 19/11 | 19/11 | 25 |
 | M2 Busca e dados | 23 a 26/11 | 26/11 | Caio | 25 |
-| M3 Portal e primeira oficina | 27 e 30/11, 01 a 03/12 | 03/12 | Enzo | 25 |
-| M4 Análise e aplicação | 04 e 07 a 10/12 | 10/12 | Pedro | 25 |
-| M5 Experimento e novo gibi | 11 e 14 a 17/12 | 17/12 | Caio | 25 |
-| M6 Pitch e encerramento | 18 e 21 a 23/12 | 23/12 | Enzo | 25 |
+| M3 Portal e primeira oficina | 27 e 30/11, 01 a 03/12 | 03/12 | 25 |
+| M4 Análise e aplicação | 04 e 07 a 10/12 | 10/12 | 25 |
+| M5 Experimento e novo gibi | 11 e 14 a 17/12 | 17/12 | 25 |
+| M6 Pitch e encerramento | 18 e 21 a 23/12 | 23/12 | 25 |
 | **Total** | **28 dias de trabalho** | | | **150** |
 
 
-## Módulo 1 Escuta e preparação
+## Módulo 1 - Estudo e preparação
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
-| Pedro | Escutar representantes externos e sintetizar necessidades.<br> Estudar o material de PI e definir público, requisitos e metas do piloto.<br> Organizar contato com coordenação e NIT, recursos e decisões de escopo. | 25 h |
-| Caio | Inventariar os gibis da série 3, os quatro primeiros da série 6 e os jogos.<br> Estudar os conceitos e preparar mapa de PI e glossário.<br> Elaborar diagnóstico de cinco perguntas e ficha de discussão dos jogos. | 25 h |
-| Enzo | Desenhar estrutura e navegação do portal estático.<br>Estudar as bases e definir campos, fontes e regra de contagem do panorama.<br>Preparar repositório, modelos de fichas e alternativas de simulação. | 25 h |
+| Pedro | Fazer primeiro contato com a Alpha Junior e sintetizar as necessidades da empresa.<br> Estudar o material de Propriedade Intelectual e definir público-alvo, requisitos e metas do piloto.<br> | 25 h |
+| Caio | Criação da pasta no Drive e Repositório no GitHub para armazenamento dos documentos que serão utilizados de base para o projeto.<br>Inventariar os gibis da série 3, os quatro primeiros da série 6 e os jogos.<br> Estudar os conceitos e preparar mapa de Propriedade Intelectual e glossário.<br> | 25 h |
+| Enzo | Desenhar estrutura e navegação do portal estático a partir de wireframes.<br>Preparar e organizar arquivos dentro do repositório do projeto, README, arquitetura, planejamento, guia de execução do portal, além dos arquivos de código e banco de dados.<br> | 25 h |
 
 ### Agenda de execução
 
 13/11 abertura, divisão de tarefas e contato com a Alpha Junior
-16 a 18/11 escuta e inventário
+16 a 18/11 estudo do tema e inventário dos gibis
 19/11 validação do problema e fechamento.
 
-### Pacote de entrega
+### Entrega
 
-Plano de escopo; registro de escuta; inventário com uso e permissões; mapa de PI (Propriedade Intelectual); diagnóstico; desenho do portal; lista de dependências com responsáveis.
+Plano de escopo finalizado; criação de planilha compartilhada para registro do que foi feito; inventário dos almanaques com uso e permissões; desenho do portal; 
 
-### Critérios de conclusão
 
-- A necessidade externa está registrada e ligada a uma entrega; público, formato e meta de vagas estão definidos.
-
-- Cada material tem objetivo, duração, regras, público e situação de permissão identificados. Os acervos originais serão solicitados aos responsáveis para uso nas oficinas.
-
-- Os pedidos de revisão institucional têm responsável e data de acompanhamento; fontes públicas e dados restritos têm destinos definidos.
-
-### Passagem para a próxima etapa
-
-O problema e o vocabulário inicial orientam a busca no M2. Os modelos de fichas e as regras de dados passam a ser usados pela equipe.
-
-## Módulo 2 Busca e dados
+## Módulo 2 - Busca e dados
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
 | Pedro | Escrever consultas exploratórias para o conjunto público de patentes.<br>Gerar agregados e arquivos de dados, com dicionário e data de extração.<br>Conferir amostra, duplicidades, limites e até três gráficos do panorama. | 25 h |
-| Caio | Testar palavras-chave, sinônimos, classificação e documento-semente.<br>Comparar INPI, PATENTSCOPE e Espacenet; Derwent apenas se houver licença.<br> Selecionar pelo menos cinco famílias e preparar ficha de patente comentada. | 25 h |
+| Caio | Testar palavras-chave, sinônimos, classificação e documento-semente.<br>Comparar INPI, PATENTSCOPE e Espacenet.<br> Selecionar pelo menos cinco famílias e preparar ficha de patente comentada. | 25 h |
 | Enzo | Implementar navegação e busca guiada por links externos.<br> Montar componentes do panorama e modelo de vitrine.<br>Integrar fichas e testar a consulta com alguém que não a redigiu. | 25 h |
 
 ### Agenda de execução
@@ -80,23 +70,11 @@ O problema e o vocabulário inicial orientam a busca no M2. Os modelos de fichas
 25/11 integração
 26/11 teste de reprodução e fechamento do conjunto inicial.
 
-### Pacote de entrega
+### Entrega
 
 Guia de busca v1, consultas registradas, fichas de pelo menos cinco famílias, dados agregados, até três gráficos e portal navegável em versão de teste.
 
-### Critérios de conclusão
-
-- As fichas guardam base, data, consulta, filtros, resultados e limitações; famílias não são contadas como documentos independentes.
-
-- O panorama explicita unidade de contagem, recorte e fonte. Consultas com cobrança têm estimativa e limite de processamento aprovados antes da execução.
-
-- Uma consulta é repetida por outro integrante e as divergências ficam registradas. O portal encaminha às bases sem prometer decisão sobre novidade.
-
-### Passagem para a próxima etapa
-
-Dados e consultas alimentam o portal do M3. As cinco famílias iniciais sustentam a leitura detalhada e a escolha do experimento no M4.
-
-## Módulo 3 Portal e primeira oficina
+## Módulo 3 - Portal e primeira oficina
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
@@ -111,23 +89,11 @@ Dados e consultas alimentam o portal do M3. As cinco famílias iniciais sustenta
 02/12 Oficina 1 de 2 h
 03/12 publicação e fechamento.
 
-### Pacote de entrega
+### Entrega
 
 Portal público com busca guiada, panorama e guia; vitrine validada ou seção explicando o fluxo institucional; Oficina 1; vídeo 1; roteiro de clínica testado; vagas ajustadas à capacidade.
 
-### Critérios de conclusão
-
-- A Oficina 1 registra presença, diagnóstico, decisões dos jogos e pelo menos uma melhoria sugerida pelo público.
-
-- O portal tem fontes e datas visíveis, links funcionais e conteúdo legível no celular. Só entram na vitrine fichas liberadas pelo NIT.
-
-- A simulação cabe no orçamento de 4 h de equipe por caso, ou a meta de seis casos é reduzida antes das inscrições. Termos e encaminhamentos são revisados pela coordenação.
-
-### Passagem para a próxima etapa
-
-A clínica abre apenas após a revisão do fluxo. As dúvidas da primeira oficina orientam os exemplos e exercícios da segunda oficina.
-
-## Módulo 4 Análise e aplicação
+## Módulo 4 - Análise e aplicação
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
@@ -142,23 +108,11 @@ A clínica abre apenas após a revisão do fluxo. As dúvidas da primeira oficin
 08 e 09/12 casos 2 e 3 e revisão da matriz e dos testes
 10/12 entrega dos relatórios e aceite técnico.
 
-### Pacote de entrega
+### Entrega
 
 Oficina 2; três relatórios de orientação; matriz técnica de duas famílias em profundidade, ligadas ao levantamento de cinco; protocolo de IA; storyboard dos 16 capítulos; plano de teste aprovado.
 
-### Critérios de conclusão
-
-- A matriz liga elemento da reivindicação, desenho ou trecho, função, observação, hipótese e alternativa de projeto.
-
-- O experimento tem pergunta, critérios de comparação, parâmetros, registro de falhas e alternativa sem hardware. A coordenação libera a versão escolhida antes dos testes.
-
-- Os três atendimentos têm registro reservado e próximos passos educativos. A Oficina 2 permite preencher uma busca e localizar uma reivindicação.
-
-### Passagem para a próxima etapa
-
-O M5 recebe arquitetura, storyboard e plano de teste estabilizados. Questões que exigem análise especializada seguem para os canais institucionais definidos.
-
-## Módulo 5 Experimento e novo gibi
+## Módulo 5 - Experimento e novo gibi
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
@@ -176,25 +130,14 @@ O M5 recebe arquitetura, storyboard e plano de teste estabilizados. Questões qu
 
 Experimento reproduzível; diário e resultados; relatórios dos casos 4 a 6; roteiro e storyboard dos 16 capítulos; pelo menos quatro capítulos diagramados; dois vídeos curtos no total.
 
-### Critérios de conclusão
 
-- Há dados, procedimento ou código, parâmetros e comparação entre esperado e observado; dados simulados são identificados. Uma falha ou limitação está explicada.
-
-- Os quatro capítulos diagramados cobrem problema e PI, busca, experimento e pitch; a experiência completa permanece no roteiro e storyboard.
-
-- O público testa a compreensão do material e sua contribuição gera ajustes registrados. Os relatórios da clínica estão concluídos até 17/12.
-
-### Passagem para a próxima etapa
-
-Os resultados sustentam o pitch do M6. O gibi e a demonstração serão refinados a partir do teste com público, sem ampliar o escopo do experimento.
-
-## Módulo 6 Pitch e encerramento
+## Módulo 6 - Pitch e encerramento
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
 | Pedro | Consolidar resultados do experimento e roteiro da demonstração.<br>Preparar narrativa, fala do pitch e respostas sobre contribuição técnica.<br> Consolidar indicadores, relatório final e conferência de evidências de horas. | 25 h |
 | Caio | Finalizar gibi e guia após as devolutivas.<br>Analisar uma chamada de hackathon e preparar checklist e formulário simulado.<br> Revisar fontes, atribuições, permissões e instruções do kit para facilitadores. | 25 h |
-| Enzo |  Produzir deck de 8 a 10 telas e integrar vídeo-demo curto.<br> Organizar ensaio, Demo Day, perguntas e avaliação do público.<br> Revisar portal, montar kit versionado e registrar guarda e manutenção. | 25 h |
+| Enzo | Produzir deck de 8 a 10 telas e integrar vídeo-demo curto.<br> Organizar ensaio, Demo Day, perguntas e avaliação do público.<br> Revisar portal, montar kit versionado e registrar guarda e manutenção. | 25 h |
 
 ### Agenda de execução
 
@@ -203,23 +146,9 @@ Os resultados sustentam o pitch do M6. O gibi e a demonstração serão refinado
 22/12 Demo Day de 1 h e devolutiva
 23/12 ajustes assíncronos, relatório e kit.
 
-### Pacote de entrega
+### Entrega
 
 Pitch oral de 3 min, deck, vídeo-demo legendado, formulário simulado, registros de banca, relatório final, seis relatórios de módulo, kit versionado e diários individuais de horas.
-
-### Critérios de conclusão
-
-- O pitch mostra problema, público, solução, demonstração, evidências, limites e próximo passo; a banca registra perguntas e melhorias.
-
-- A chamada de estudo tem fonte, edição, prazo, elegibilidade, entregáveis e regras registrados; submissão real depende de decisão posterior da equipe e coordenação.
-
-- A soma validada do planejamento é de 150 h por pessoa. O kit permite repetir busca e experimento, e identifica quem guardará e atualizará os arquivos.
-
-### Fechamento de cada módulo
-
-O responsável pelo módulo reúne os arquivos; cada integrante registra suas horas e seus aprendizados; um colega verifica fontes e entregas; o trio resolve ajustes e define o que passa à etapa seguinte. Dúvidas que dependem da orientação ficam registradas com responsável e prazo.
-
-Rodízio de revisão: Caio revisa as entregas de Pedro, Enzo revisa as de Caio e Pedro revisa as de Enzo. A pessoa que coordenou o módulo organiza o aceite e a versão final; isso não transfere para ela as tarefas dos demais.
 
 ### Fluxo da clínica educativa
 
@@ -227,12 +156,12 @@ Inscrição com descrição geral da necessidade → triagem e agenda → encont
 
 | Caso | Atendimento | Dupla | Redige | Revisa | Relatório até |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| 1 | 04/12 | Pedro e Caio | Pedro | Caio | 10/12 |
-| 2 | 08/12 | Caio e Enzo | Caio | Enzo | 10/12 |
-| 3 | 09/12 | Enzo e Pedro | Enzo | Pedro | 10/12 |
-| 4 | 11/12 | Pedro e Caio | Pedro | Caio | 17/12 |
-| 5 | 14/12 | Caio e Enzo | Caio | Enzo | 17/12 |
-| 6 | 15/12 | Enzo e Pedro | Enzo | Pedro | 17/12 |
+| 1 | - | Todos | Pedro | Caio | - |
+| 2 | - | Todos | Caio | Enzo | - |
+| 3 | - | Todos | Enzo | Pedro | - |
+| 4 | - | Todos | Pedro | Caio | - |
+| 5 | - | Todos | Caio | Enzo | - |
+| 6 | - | Todos | Enzo | Pedro | - |
 
 ## Entregas mínimas e limites de escopo
 
@@ -251,7 +180,8 @@ Inscrição com descrição geral da necessidade → triagem e agenda → encont
 
 ### Rotina de execução
 
-Realizar uma reunião semanal de 30 min dentro da reserva do módulo e uma conversa de validação com a orientação nos marcos combinados. Na abertura de cada semana, rever tarefas e agenda externa; no fechamento, conferir horas, produtos e bloqueios. As revisões de módulo complementam essa rotina dentro das 4 h já reservadas.
+Reunião semanal de 1h com dia e horário fixos: sempre Sexta-feira 14h. 
+Debate sobre o que foi realizado no módulo e uma conversa de validação com a orientação caso necessária. Na abertura de cada semana, rever tarefas e agenda externa; no fechamento, conferir horas, produtos e dúvidas que ficaram. 
 
 | Indicador | Como registrar | Momento |
 | :-- | :-- | :-- |
@@ -275,22 +205,18 @@ Realizar uma reunião semanal de 30 min dentro da reserva do módulo e uma conve
 
 - O que ainda é preciso verificar antes de explorar comercialmente uma solução estudada?
 
-## Recursos e decisões de execução
-
-Usar computadores, internet, armazenamento institucional, editor de documentos, ferramentas de formulário e reunião, repositório e hospedagem estática. A opção inicial do laboratório é uma simulação reproduzível; hardware depende de materiais, local e supervisão disponíveis. Impressões, componentes, custos de consulta e licenças precisam de levantamento e aprovação antes do gasto.
-
 | Dependência ou risco | Responsável pelo acompanhamento | Resposta prevista |
 | :-- | :-- | :-- |
-| Orientação e comprovação das horas | Pedro com coordenação | No M1, confirmar vínculo institucional, registros e critérios de comprovação. Manter diário individual e entregas. |
-| Permissão para gibis e jogos | Caio com titulares e coordenação | Solicitar no M1; até M3, usar apenas materiais autorizados ou atividades originais com os mesmos objetivos. |
-| Fichas e retorno do NIT | Enzo com contato institucional | Solicitar no M1 e acompanhar no M3. Sem liberação até 03/12, manter fichas reservadas e publicar só o canal institucional. |
+| Orientação e comprovação das horas | Caio | No M1, confirmar vínculo institucional, registros e critérios de comprovação. Manter diário individual e entregas. |
+| Permissão para gibis e jogos | Caio | Solicitar no M1; até M3, usar apenas materiais autorizados ou atividades originais com os mesmos objetivos. |
 | Custo de consulta e indisponibilidade de base | Pedro e Enzo | Estimar antes de executar; usar amostra ou agregados públicos documentados se não houver verba. Derwent é opcional. |
-| Poucas inscrições ou casos demorados | Enzo na agenda e trio na execução | Rever divulgação e medir esforço no M3; limitar casos antes de aceitar inscrições, mantendo a devolutiva dos já recebidos. |
-| Falha ou atraso do experimento | Pedro e orientação técnica | Preservar pergunta e plano de teste; usar simulação, registrar limitação e comunicar resultado negativo quando ocorrer. |
-| Dados pessoais ou informação de invenção | Trio e responsável institucional | Coletar só o necessário; separar registros reservados do kit público; definir acesso, guarda e descarte no fluxo institucional. |
-| Recesso ou impedimento de agenda | Responsável pelo módulo | Redistribuir dentro da mesma semana sem exceder 25 h individuais; se não for possível, mudar datas e manter a carga total. |
+| Falha ou atraso do experimento | Pedro | Preservar pergunta e plano de teste; usar simulação, registrar limitação e comunicar resultado negativo quando ocorrer. |
+| Dados pessoais ou informação de invenção | Pedro | Coletar só o necessário; separar registros reservados do kit público; definir acesso, guarda e descarte no fluxo institucional. |
+| Recesso ou impedimento de agenda | Caio | Redistribuir dentro da mesma semana sem exceder 25 h individuais; se não for possível, mudar datas e manter a carga total. |
 
+## Observações 
 
+A opção inicial do laboratório é uma simulação reproduzível; hardware depende de materiais, local e supervisão disponíveis. Impressões, componentes, custos de consulta e licenças precisam de levantamento e aprovação antes do gasto.
 
 O conteúdo é educativo. A coordenação revisa o guia, o roteiro da clínica e os encaminhamentos; questões específicas de proteção, direitos ou licenciamento seguem para os canais habilitados. O experimento e o pitch usam informações cuja divulgação foi autorizada. Dados da clínica ficam fora do portal e das ferramentas externas de IA.
 
@@ -304,5 +230,3 @@ EPO Espacenet
 Google BigQuery Conjuntos de dados públicos
 UNIRIO Pró Reitoria de Extensão e Cultura
 Solana Eventos para estudo de chamadas
-Calendário federal de feriados e pontos facultativos de 2026
-

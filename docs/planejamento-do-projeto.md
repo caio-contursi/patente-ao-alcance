@@ -8,7 +8,7 @@ Coordenador do planejamento --> Caio Contursi
 | Duração | 6 semanas de execução |
 | Carga horária | 25 h semanais por integrante, 150 h por integrante |
 | Organização | 6 módulos de 25 h por integrante, um por semana |
-| Conclusão prevista | 27.2 (segundo semestre de 2027) |
+| Conclusão prevista | 23/12/2026 |
 
 ## Objetivos
 

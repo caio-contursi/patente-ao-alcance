@@ -1,7 +1,7 @@
 # Patente ao Alcance PARTE 1 - Preparação do ambiente e implementação de testes
 
 Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  13/11/2026 a 23/12/2026
-Coordenador do planejamento --> Caio Contursi
+Coordenador da parte 1 --> Caio Contursi
 
 | Parâmetro | Definição |
 | :-- | :-- |
@@ -45,34 +45,22 @@ Plano inicial: contatar a Alpha Junior (empresa júnior de BSI) na abertura do M
 | Caio | Criação da pasta no Drive e Repositório no GitHub para armazenamento dos documentos que serão utilizados de base para o projeto.<br>Inventariar os gibis da série 3, os quatro primeiros da série 6 e os jogos.<br> Estudar os conceitos e preparar mapa de Propriedade Intelectual e glossário.<br> | 25 h |
 | Enzo | Desenhar estrutura e navegação do portal estático a partir de wireframes.<br>Preparar e organizar arquivos dentro do repositório do projeto, README, arquitetura, planejamento, guia de execução do portal, além dos arquivos de código e banco de dados.<br> | 25 h |
 
-### Agenda de execução
-
-13/11 abertura, divisão de tarefas e contato com a Alpha Junior
-16 a 18/11 estudo do tema e inventário dos gibis
-19/11 validação do problema e fechamento.
-
 ### Entrega
 
 Plano de escopo finalizado; criação de planilha compartilhada para registro do que foi feito; inventário dos almanaques com uso e permissões; desenho do portal; 
 
 
-## Módulo 2 - Busca e dados
+## Módulo 2 - Jogo
 
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
-| Pedro | Escrever consultas exploratórias para o conjunto público de patentes.<br>Gerar agregados e arquivos de dados, com dicionário e data de extração.<br>Conferir amostra, duplicidades, limites e até três gráficos do panorama. | 25 h |
-| Caio | Testar palavras-chave, sinônimos, classificação e documento-semente.<br>Comparar INPI, PATENTSCOPE e Espacenet.<br> Selecionar pelo menos cinco famílias e preparar ficha de patente comentada. | 25 h |
-| Enzo | Implementar navegação e busca guiada por links externos.<br> Montar componentes do panorama e modelo de vitrine.<br>Integrar fichas e testar a consulta com alguém que não a redigiu. | 25 h |
-
-### Agenda de execução
-
-23 e 24/11 para pesquisa e primeiras consultas
-25/11 integração
-26/11 teste de reprodução e fechamento do conjunto inicial.
+| Pedro | Coleta de informações sobre a Alpha Junior e construção do cenário da empresa para dar início ao processo de criação do jogo.<br>Anotar como a Alpha Junior pensa e se comporta diante essa proposta e principalmente sobre o tema em si. | 25 h |
+| Caio | Responsável por determinar materiais que serão utilizados, regras, ferramentas, etc. --> Tudo o que será necessário para confecção do jogo tanto da parte técnica como física. | 25 h |
+| Enzo | Alinhar conceitos de MCT que serão utilizados no projeto e no ensino técnico projetado para a Alpha Junior (tudo o que for necessário).<br>Pensar ideias que estimularão o engajamento no jogo e vão aumentar o interesse em aprender de fato sobre o assunto através do jogo. | 25 h |
 
 ### Entrega
 
-Guia de busca v1, consultas registradas, fichas de pelo menos cinco famílias, dados agregados, até três gráficos e portal navegável em versão de teste.
+Reunião com a Alpha Junior para coleta de informações; Materiais necessários para produção do jogo; Ideias para estimular interesse dos jogadores.
 
 ## Módulo 3 - Portal e primeira oficina
 
@@ -81,13 +69,6 @@ Guia de busca v1, consultas registradas, fichas de pelo menos cinco famílias, d
 | Pedro | Integrar gráficos, método e fontes ao portal.<br> Simular um atendimento, medir esforço e revisar formulário e relatório.<br> Facilitar jogos na oficina e consolidar diagnóstico e dúvidas do público. | 25 h |
 | Caio | Preparar roteiro e slides e conduzir a Oficina 1 com gibis e jogos.<br> Produzir guia educativo do percurso de depósito, com links oficiais revisados.<br> Testar a linguagem do roteiro do novo gibi e preparar o primeiro vídeo curto. | 25 h |
 | Enzo | Finalizar portal, links, leitura no celular e navegação por teclado.<br>Preparar até três fichas de tecnologias e encaminhar à validação do NIT.<br>Organizar inscrições, divulgação autorizada, agenda e materiais acessíveis. | 25 h |
-
-### Agenda de execução
-
-27 e 30/11 integração e simulação
-01/12 revisão da oficina
-02/12 Oficina 1 de 2 h
-03/12 publicação e fechamento.
 
 ### Entrega
 
@@ -101,13 +82,6 @@ Portal público com busca guiada, panorama e guia; vitrine validada ou seção e
 | Caio | Aprofundar duas famílias e construir matriz de reivindicações, desenhos e hipóteses.<br> Apoiar buscas na oficina e executar exercício de IA conferido no original.<br>Atuar no primeiro bloco da clínica, com busca, relatório e revisão. | 25 h |
 | Enzo |  Documentar entradas, saídas e comportamento de um sistema ou componente acessível.<br>Criar plano de testes, roteiro de reprodução e storyboard do gibi.<br>Atuar no primeiro bloco da clínica, com busca, relatório e revisão. | 25 h |
 
-### Agenda de execução
-
-04/12 para o caso 1 da clínica
-07/12 Oficina 2 de 2 h
-08 e 09/12 casos 2 e 3 e revisão da matriz e dos testes
-10/12 entrega dos relatórios e aceite técnico.
-
 ### Entrega
 
 Oficina 2; três relatórios de orientação; matriz técnica de duas famílias em profundidade, ligadas ao levantamento de cinco; protocolo de IA; storyboard dos 16 capítulos; plano de teste aprovado.
@@ -119,12 +93,6 @@ Oficina 2; três relatórios de orientação; matriz técnica de duas famílias 
 | Pedro |  Implementar simulação de nível, vazão e alertas, ou bancada aprovada.<br> Executar cenários, registrar falhas e preparar dados e instruções de reprodução.<br>Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
 | Caio |  Revisar roteiro e conceitos do novo gibi a partir dos resultados reais.<br> Diagramar ao menos quatro capítulos e testar compreensão com o público.<br> Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
 | Enzo | Executar testes independentes e verificar requisitos com os dados observados.<br> Produzir vídeo 2, preparar demonstração e registrar melhorias do portal e do gibi.<br>Atuar no segundo bloco da clínica, com busca, relatório e revisão. | 25 h |
-
-### Agenda de execução
-
-11, 14 e 15/12 para os casos 4, 5 e 6 da clínica. --> 11 e 14 a 16/12 construção e testes
-16/12, teste de compreensão
-17/12, devolutivas, relatórios e fechamento.
 
 ### Pacote de entrega
 
@@ -138,13 +106,6 @@ Experimento reproduzível; diário e resultados; relatórios dos casos 4 a 6; ro
 | Pedro | Consolidar resultados do experimento e roteiro da demonstração.<br>Preparar narrativa, fala do pitch e respostas sobre contribuição técnica.<br> Consolidar indicadores, relatório final e conferência de evidências de horas. | 25 h |
 | Caio | Finalizar gibi e guia após as devolutivas.<br>Analisar uma chamada de hackathon e preparar checklist e formulário simulado.<br> Revisar fontes, atribuições, permissões e instruções do kit para facilitadores. | 25 h |
 | Enzo | Produzir deck de 8 a 10 telas e integrar vídeo-demo curto.<br> Organizar ensaio, Demo Day, perguntas e avaliação do público.<br> Revisar portal, montar kit versionado e registrar guarda e manutenção. | 25 h |
-
-### Agenda de execução
-
-18/12 para o pacote de pitch e a chamada de estudo
-21/12 ensaio
-22/12 Demo Day de 1 h e devolutiva
-23/12 ajustes assíncronos, relatório e kit.
 
 ### Entrega
 
@@ -230,3 +191,27 @@ EPO Espacenet
 Google BigQuery Conjuntos de dados públicos
 UNIRIO Pró Reitoria de Extensão e Cultura
 Solana Eventos para estudo de chamadas
+
+# Patente ao Alcance PARTE 2 - Processo de produção do gibi
+
+Pedro Bartkevihi, Caio Contursi e Enzo Paulino  |  
+Coordenador da parte 2 --> Caio Contursi
+
+| Parâmetro | Definição |
+| :-- | :-- |
+| Duração | --- |
+| Carga horária | ---- |
+| Organização | --- |
+| Conclusão prevista | ---- |
+
+## Cronograma semanal
+
+| Semana e módulo | Dias de trabalho em 2026 | Entrega | Responsável | Horas por integrante |
+| :--- | :--- | :--- | :--- | ---: |
+| M1 |  | |  | 25 |
+| M2|  |  |  | 25 |
+| M3 |  |  |  | 25 |
+| M4  |  |  |  | 25 |
+| M5  |  |  |  | 25 |
+| M6  |  |  |  | 25 |
+| **Total** | **28 dias de trabalho** | | | **150** |

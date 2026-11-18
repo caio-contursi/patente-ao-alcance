@@ -29,7 +29,7 @@ Plano inicial: contatar a Alpha Junior (empresa júnior de BSI) na abertura do M
 | Semana e módulo | Dias de trabalho em 2026 | Entrega | Horas por integrante |
 | :-- | :-- | :-- | :-- | --: |
 | M1 Estudo e preparação do ambiente | 13 e 16 a 19/11 | 19/11 | 25 |
-| M2 Busca e dados | 23 a 26/11 | 26/11 | Caio | 25 |
+| M2 Busca e dados | 23 a 26/11 | 26/11 | 25 |
 | M3 Portal e primeira oficina | 27 e 30/11, 01 a 03/12 | 03/12 | 25 |
 | M4 Análise e aplicação | 04 e 07 a 10/12 | 10/12 | 25 |
 | M5 Experimento e novo gibi | 11 e 14 a 17/12 | 17/12 | 25 |

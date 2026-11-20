@@ -2,13 +2,30 @@
 
 Projeto de extensão para democratizar o acesso à informação sobre patentes e apoiar a pesquisa de tecnologias com foco, à priori, em documentos depositados no território nacional.
 
+## Interface atual: módulos 1, 2 e 3
+
+Este repositório contém oito wireframes navegáveis para apresentar à orientadora: início, preparação da equipe, jogo de PI, busca guiada, panorama, materiais, primeira oficina e vitrine UNIRIO. O recorte segue as descrições detalhadas dos módulos **Estudo e preparação**, **Jogo** e **Portal e primeira oficina** do planejamento.
+
+Com o Docker Desktop em execução, abra um terminal na raiz e execute:
+
+```powershell
+docker compose up -d --build
+```
+
+Acesse [http://localhost:5181](http://localhost:5181). O código completo está em `frontend/`, em HTML, CSS e JavaScript, servido pelo Nginx. Os controles permitem visualizar as telas no computador ou celular, consultar notas para discussão e imprimir as oito telas.
+
+A busca guiada organiza termos e abre bases externas. Os gráficos usam valores sintéticos, o jogo contém situações fictícias e os formulários são demonstrações sem envio de dados. A vitrine aguarda fichas validadas pelo NIT. Esta versão funciona sem API, banco de dados ou IA.
+
 ## Documentos do projeto
 
 - [Planejamento de 150 horas por integrante](docs/planejamento-do-projeto.md) — seis módulos, cronograma, tarefas, entregas, responsabilidades e modelo de registro.
-- [Visão do produto e arquitetura inicial](docs/visao-e-arquitetura-inicial.md) — objetivos, escopo do protótipo, fluxo do site, explicação da IA local, privacidade e evolução internacional.
-- [Guia para executar a estrutura inicial](frontend/exec-guide.md) — requisitos e comandos para abrir a interface e a API localmente.
+- [Visão do produto e arquitetura inicial](docs/visao-e-arquitetura-inicial.md) — documento de referência sobre objetivos, arquitetura e evolução; não descreve integralmente a implementação atual.
+- [Guia de execução do portal](exec-guide.md) — execução com Docker, organização do código e limites da demonstração.
+- [Wireframes em PDF](docs/wireframes-m1-m3.pdf) — oito telas para leitura e apresentação.
 
-## Objetivos principais:
+## Objetivos do projeto completo
+
+Os objetivos abaixo abrangem a evolução do projeto. A implementação disponível nesta etapa é o recorte M1–M3 descrito acima.
 
 - Publicar um portal com busca guiada e uma base de dados das patentes no Brasil a partir do Google Patents Public Datasets., dando ênfase às patentes da UNIRIO e acrescentando texto didático em linguagem simples para as patentes da universidade.
 - Produzir conteúdos em vídeo de orientação online, com espaço para dúvidas e questionamentos.
@@ -28,18 +45,17 @@ Projeto de extensão para democratizar o acesso à informação sobre patentes e
    
 ## Escopo inicial
 
-O primeiro protótipo prioriza documentos de patentes brasileiros. Deve oferecer um portal que intermediará relações entre nosso grupo e pequenas empresas e negócio por meio da clínica de busca por palavras e descrição técnica, filtros disponíveis, resultados com metadados e links oficiais, comparação explicável e respostas apoiadas nos trechos recuperados.
+O primeiro protótipo prioriza a navegação do portal e a validação da linguagem com o público. A preparação reúne escuta, inventário, mapa de PI e decisões sobre o jogo. A busca orienta a composição de termos para uso nas bases externas. A oficina e o atendimento educativo são apresentados por simulações.
 
 Uma busca sem resultados não prova novidade nem ausência de anterioridade. A avaliação oficial depende do pedido, das reivindicações, do estado da técnica e do exame competente. A ferramenta não substitui orientação profissional.
 
 A cobertura internacional será gradual. Para o primeiro ciclo, a equipe pode fornecer links para bases oficiais ou demonstrar uma consulta limitada a uma única fonte, conforme acesso e condições de uso. Indexar patentes do mundo todo não faz parte do escopo inicial.
 
-O backend será majoritariamente Java, com Spring Boot como opção para a API. O frontend será TypeScript. PostgreSQL e pgvector são opções iniciais para dados e busca semântica; 
-Ollama poderá ser avaliado para executar modelos localmente. As escolhas dependem dos recursos reais da VPS, das licenças e de testes de qualidade e velocidade. (Futuramente)
+Uma futura integração de dados e serviços deverá ter escopo validado com a orientação antes da escolha de tecnologias. O código anterior de React, API Java e integração com Ollama foi substituído pela interface estática atual.
 
 ## Experiência e funcionalidades
 
-A pessoa informa o problema técnico, a solução e seus componentes principais. O site apresenta resultados e evidências antes da explicação automatizada. Cada documento deve ter identificador, metadados disponíveis, origem e link verificável.
+A pessoa descreve o problema e os componentes, revisa os termos e escolhe uma base externa para continuar a pesquisa. Os materiais educativos e o jogo apresentam referências para consulta. O panorama mostra a estrutura prevista para gráficos, com todos os valores identificados como sintéticos.
 
 Depois do protótipo, podem ser avaliados busca guiada, comparação lado a lado de reivindicações, glossário e linha do tempo de pedidos, relatórios exportáveis, materiais de oficina, feedback e integrações internacionais adicionais.
 
@@ -47,13 +63,13 @@ Como descrições de invenções podem ser confidenciais, o protótipo deve aler
 
 ## Plano de trabalho
 
-A equipe é formada por Pedro Bartkevihi, Caio Contursi e Enzo Paulino. O planejamento atual prevê 150 horas por integrante, 20 horas semanais por pessoa.
+A equipe é formada por Pedro Bartkevihi, Caio Contursi e Enzo Paulino. O planejamento atual prevê 150 horas por integrante, 25 horas semanais por pessoa.
 
 O trabalho está organizado em seis módulos iguais de 25 horas por pessoa:
 
-1. Escuta, requisitos e preparação.
-2. Fontes, dados e busca textual.
-3. API Java, interface TypeScript e primeira integração.
-4. Comparação, evidências e materiais de oficina.
-5. Busca semântica, modelo local e avaliação.
-6. Revisão, documentação, demonstração e pitch.
+1. Estudo e preparação.
+2. Jogo.
+3. Portal e primeira oficina.
+4. Análise e aplicação.
+5. Experimento e novo gibi.
+6. Pitch e encerramento.

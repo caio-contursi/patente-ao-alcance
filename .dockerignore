@@ -1,0 +1,10 @@
+*
+!Dockerfile.web
+!docker/
+docker/**
+!docker/nginx.conf
+!frontend/
+frontend/**
+!frontend/index.html
+!frontend/app.js
+!frontend/styles.css

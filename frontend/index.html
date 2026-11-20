@@ -1,17 +1,22 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f7f7f3" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Pesquise documentos de patente e entenda as evidências encontradas."
+      content="Wireframes navegáveis dos módulos 1 a 3 do projeto de extensão Patente ao Alcance."
     />
-    <title>Patente ao Alcance</title>
+    <title>Patente ao Alcance · Wireframes</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <a class="skip-link" href="#screen">Ir para a tela</a>
+    <div id="app"></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="dialog" aria-labelledby="dialog-title">
+      <div id="dialog-content"></div>
+    </dialog>
   </body>
 </html>

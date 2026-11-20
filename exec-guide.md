@@ -1,93 +1,57 @@
-# Desenvolvimento local
+# Executar o portal Patente ao Alcance
 
-## O que já está nesta primeira estrutura
+A interface atual reúne oito wireframes navegáveis dos módulos 1, 2 e 3. O código está em `frontend/index.html`, `frontend/app.js` e `frontend/styles.css` e é servido diretamente pelo Nginx. Não há instalação de pacotes ou compilação.
 
-- `backend/`: API Java 21 com Spring Boot. Inclui busca textual simples, consulta de documento, explicação demonstrativa e retorno de feedback sem persistência.
-- `frontend/`: interface React + TypeScript para busca guiada, resultados, seleção para comparação, avisos de escopo e apresentação responsiva.
-- `docs/`: planejamento e visão do produto usados como referência.
+## Executar com Docker
 
-A aba **Pesquisar** usa exemplos sintéticos. A aba **Chat com a IA** usa um catálogo separado, com publicações reais da RPI e referências educativas do INPI.
-
-## Executar a interface
-
-Requisitos: Node.js 20.19+ ou 22.12+.
+Com o Docker Desktop em execução, abra um terminal na raiz do repositório:
 
 ```powershell
-cd frontend
-npm install
-npm run dev
+docker compose up -d --build
 ```
 
-Abra `http://localhost:5173`. A busca demonstrativa tem exemplos locais
-quando a API Java está desligada. O chat requer a API.
-Se o Vite usar outra porta, configure `WEB_ORIGIN` com o endereço exato da
-interface antes de iniciar o Java. Origens múltiplas podem ser separadas por vírgula.
+Abra [http://localhost:5181](http://localhost:5181). A porta fica disponível apenas neste computador.
 
-## Executar a API
-
-Requisitos: JDK 21 e Maven 3.6.3 ou superior.
+Para conferir o serviço e encerrá-lo:
 
 ```powershell
-cd backend
-mvn spring-boot:run
+docker compose ps
+docker compose down
 ```
 
-A API inicia em `http://localhost:8080`. Os endpoints iniciais são:
+Depois de alterar o código, execute novamente `docker compose up -d --build` para atualizar a imagem. O projeto usa somente o serviço `web`; não requer API, banco de dados ou Ollama.
 
-- `GET /actuator/health`
-- `POST /api/search`
-- `GET /api/patents/{id}`
-- `POST /api/explain`
-- `POST /api/feedback`
-- `POST /api/research/chat`
+## Executar sem Docker
 
-Exemplo de pesquisa:
-
-```json
-{
-  "description": "Sistema para captar água da chuva com filtragem e sensor de nível"
-}
-```
-
-## Executar o chat com IA local
-
-Com a API Java e a interface em execução, abra **Chat com a IA** na navegação.
-A API usa o Ollama em `http://127.0.0.1:11434/api/chat`, com o modelo
-`qwen2.5:1.5b`. Em um ambiente com Docker, inicie o serviço em loopback e
-baixe o modelo:
+Como alternativa, com Python instalado, execute na raiz:
 
 ```powershell
-docker run -d --name patente-ollama -e OLLAMA_NO_CLOUD=1 -p 127.0.0.1:11434:11434 -v patente-ollama-models:/root/.ollama ollama/ollama
-docker exec patente-ollama ollama pull qwen2.5:1.5b
-docker exec patente-ollama ollama pull qwen3-embedding:0.6b
+python -m http.server 5181 --bind 127.0.0.1 --directory frontend
 ```
 
-Defina `RESEARCH_OLLAMA_URL` e `RESEARCH_OLLAMA_MODEL` ao iniciar o Java para
-usar outro endpoint ou modelo. O endpoint `POST /api/research/chat` recebe a
-pergunta e até três perguntas anteriores. O Java faz a busca por termos e
-sinônimos, seleciona fontes do catálogo em
-`backend/src/main/resources/research/sources.json` e associa a resposta às
-referências do catálogo. Quando a geração falha, a tela mostra os resumos
-recuperados. A conversa fica na memória da página.
+Abra o mesmo endereço. Encerre esse servidor antes de usar a mesma porta no Docker.
 
-O chat exibe o plano da consulta, a busca, a conferência de referências do
-catálogo, as correspondências por característica e a resposta final.
-`RESEARCH_EMBEDDING_MODEL` configura o modelo de busca semântica. A API
-usa correspondência textual quando o modelo está indisponível.
-Cada consulta pode ser baixada como relatório Markdown ou salva por escolha
-da pessoa no navegador. Os relatórios salvos ficam neste navegador.
+## O que pode ser apresentado
 
-O catálogo inicial reúne dois pedidos publicados na RPI sobre captação de
-água e quatro referências educativas do INPI. Ele não cobre a base nacional
-completa. A aba de pesquisa anterior continua com seus dados demonstrativos.
+- Início do portal e caminhos de navegação.
+- Preparação da equipe: escuta, inventário e decisões para o jogo.
+- Jogo demonstrativo de propriedade intelectual com três situações e referências.
+- Busca guiada: montagem de termos e abertura das bases externas.
+- Panorama com três gráficos de valores sintéticos.
+- Materiais, mapa de PI, glossário e estrutura do guia de depósito.
+- Primeira oficina: inscrição, diagnóstico, feedback e atendimento simulados.
+- Vitrine UNIRIO aguardando validação do NIT.
 
-## Próximas etapas técnicas
+Os controles da apresentação alternam a visualização entre computador e celular e mostram ou ocultam as notas para discussão. O botão de impressão reúne as oito telas iniciais em A4 paisagem. A [versão PDF dos wireframes](docs/wireframes-m1-m3.pdf) também está no repositório.
 
-1. Inventariar a VPS e confirmar CPU, RAM, armazenamento, GPU e sistema operacional.
-2. Escolher e documentar uma fonte oficial e uma amostra permitida antes de substituir o corpus demonstrativo.
-3. Implementar importação, normalização, proveniência e links de origem.
-4. Criar persistência em PostgreSQL e avaliar a busca textual com casos de referência.
-5. Experimentar embeddings e busca semântica; comparar os resultados com a busca textual.
-6. Conectar um modelo de pesos abertos local somente depois de validar recuperação e requisitos da VPS; manter as respostas ancoradas em trechos recuperados.
+A busca ocorre na base externa escolhida pela pessoa. Não há coleta automática de patentes. Os gráficos e as situações do jogo são demonstrativos. Os formulários não enviam dados: os rascunhos ficam somente na memória da página e desaparecem ao recarregá-la. O site usa Google Fonts quando disponível e fontes do sistema como alternativa.
 
-Não mostrar probabilidades de concessão. Uma futura métrica de similaridade deverá ser explicada como ordenação de resultados, nunca como probabilidade de patenteabilidade.
+## Referência do recorte
+
+Os wireframes seguem o [planejamento no commit 907f240](https://github.com/caio-contursi/patente-ao-alcance/blob/907f24080b9fc1b606cc11ac022e24ddfa0582dd/docs/planejamento-do-projeto.md). Foi adotada a descrição detalhada do módulo 2, intitulada **Jogo**; a tabela resumida desse mesmo documento ainda usa o título **Busca e dados**. Essa divergência deve ser alinhada com a orientação.
+
+## Organização
+
+- `frontend/`: todos os arquivos usados pela interface.
+- `Dockerfile.web`, `compose.yaml` e `docker/nginx.conf`: execução local com Docker.
+- `docs/`: planejamento, visão do projeto, inventário e PDF para apresentação.

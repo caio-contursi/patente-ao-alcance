@@ -21,7 +21,7 @@ A busca guiada organiza termos e abre bases externas. Os gráficos usam valores 
 - [Planejamento de 150 horas por integrante](docs/planejamento-do-projeto.md) — seis módulos, cronograma, tarefas, entregas, responsabilidades e modelo de registro.
 - [Visão do produto e arquitetura inicial](docs/visao-e-arquitetura-inicial.md) — documento de referência sobre objetivos, arquitetura e evolução; não descreve integralmente a implementação atual.
 - [Guia de execução do portal](exec-guide.md) — execução com Docker, organização do código e limites da demonstração.
-- [Wireframes em PDF](docs/wireframes-m1-m3.pdf) — oito telas para leitura e apresentação.
+- [Wireframes em PDF](docs/first-wireframes.pdf) — oito telas para leitura e apresentação.
 
 ## Objetivos do projeto completo
 

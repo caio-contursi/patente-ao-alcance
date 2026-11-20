@@ -42,7 +42,7 @@ Abra o mesmo endereço. Encerre esse servidor antes de usar a mesma porta no Doc
 - Primeira oficina: inscrição, diagnóstico, feedback e atendimento simulados.
 - Vitrine UNIRIO aguardando validação do NIT.
 
-Os controles da apresentação alternam a visualização entre computador e celular e mostram ou ocultam as notas para discussão. O botão de impressão reúne as oito telas iniciais em A4 paisagem. A [versão PDF dos wireframes](docs/wireframes-m1-m3.pdf) também está no repositório.
+Os controles da apresentação alternam a visualização entre computador e celular e mostram ou ocultam as notas para discussão. O botão de impressão reúne as oito telas iniciais em A4 paisagem. A [versão PDF dos wireframes](docs/first-wireframes.pdf) também está no repositório.
 
 A busca ocorre na base externa escolhida pela pessoa. Não há coleta automática de patentes. Os gráficos e as situações do jogo são demonstrativos. Os formulários não enviam dados: os rascunhos ficam somente na memória da página e desaparecem ao recarregá-la. O site usa Google Fonts quando disponível e fontes do sistema como alternativa.
 

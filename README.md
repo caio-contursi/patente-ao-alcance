@@ -57,5 +57,3 @@ O trabalho está organizado em seis módulos iguais de 25 horas por pessoa:
 4. Comparação, evidências e materiais de oficina.
 5. Busca semântica, modelo local e avaliação.
 6. Revisão, documentação, demonstração e pitch.
-
-As datas, entregas e tarefas detalhadas ficam no [documento de planejamento](docs/planejamento-do-projeto.md).

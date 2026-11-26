@@ -12,3 +12,4 @@ output/
 wireframes-m1-m3/
 dist/
 .openai/
+dados/*.db

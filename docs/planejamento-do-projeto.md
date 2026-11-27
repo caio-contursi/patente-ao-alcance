@@ -42,7 +42,7 @@ Plano inicial: contatar a Alpha Junior (empresa júnior de BSI) na abertura do M
 | Integrante | Atividades de produção e aplicação | Carga |
 | :-- | :-- | :-- |
 | Pedro | Fazer primeiro contato com a Alpha Junior e sintetizar as necessidades da empresa.<br> Estudar o material de Propriedade Intelectual e definir público-alvo, requisitos e metas do piloto.<br> | 25 h |
-| Caio | Criação da pasta no Drive e Repositório no GitHub para armazenamento dos documentos que serão utilizados de base para o projeto.<br>Inventariar os gibis da série 3, os quatro primeiros da série 6 e os jogos.<br> Estudar os conceitos e preparar mapa de Propriedade Intelectual e glossário.<br> | 25 h |
+| Caio | Criação da pasta no Drive e Repositório no GitHub para armazenamento dos documentos que serão utilizados de base para o projeto.<br>Inventariar os gibis da série 3, os quatro primeiros da série 6 e os jogos.<br> Estudar os conceitos e preparar glossário.<br> | 25 h |
 | Enzo | Desenhar estrutura e navegação do portal estático a partir de wireframes.<br>Preparar e organizar arquivos dentro do repositório do projeto, README, arquitetura, planejamento, guia de execução do portal, além dos arquivos de código e banco de dados.<br> | 25 h |
 
 ### Entrega

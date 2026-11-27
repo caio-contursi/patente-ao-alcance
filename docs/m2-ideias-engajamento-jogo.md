@@ -1,15 +1,5 @@
 # Ideias de engajamento para o jogo (M2)
 
-Proposta de 23 a 26 de novembro de 2026 para o jogo do módulo 2. O objetivo é que a Alpha Junior queira continuar jogando e, ao mesmo tempo, aprenda a buscar e ler documentos de patente. As ideias partem dos jogos já inventariados e de um jogo recente da própria UNIRIO, para que o Caio possa encaixá-las nos materiais e regras e o Pedro possa ajustá-las ao cenário da empresa júnior.
-
-## Referências usadas
-
-O [S6V11 Missão Inovação com Mapeamento Sistemático](https://almanaquesdacomputacao.com.br/gutanunes/publications/serie6/S6V11small.pdf) é um jogo cooperativo em quatro fases (Sala de Planejamento, Biblioteca Digital, Laboratório de Análise e Auditório). A equipe joga junta contra o baralho: vence com pelo menos 8 pontos de inovação e as questões de pesquisa respondidas, e perde se as cartas de artigo acabarem antes. Tem cartas guia por fase, cartas de dica, manual de validação e formulário de pesquisa, e termina com um pitch.
-
-Do [inventário](inventario-de-gibis.md) vêm o S3V20 (Gerenciando Ativos por PI), cuja aplicação relatada em uma startup foi interrompida após 1 h 50 min, o S3V30 (Guerra das Patentes), apresentado pelos autores como simplificação para discussão, e o S3V32 (PatenteTech: V ou F?), com mediador e 10 rodadas. O guia S12V6 organiza avaliação inicial, jogo e avaliação posterior.
-
-## Ideias
-
 | Ideia | Como funciona | Por que ajuda |
 | :-- | :-- | :-- |
 | Equipe contra o jogo | Toda a empresa júnior joga do mesmo lado, como no S6V11. O adversário é o tempo ou um baralho que acaba. | Ninguém fica exposto por errar na frente dos colegas, e a discussão vira parte da estratégia. |
@@ -24,7 +14,7 @@ Do [inventário](inventario-de-gibis.md) vêm o S3V20 (Gerenciando Ativos por PI
 | Antes e depois | As mesmas cinco perguntas do diagnóstico antes da Oficina 1 e depois da Oficina 2, como no S12V6. | Mostra se o jogo ensinou e gera o indicador de aprendizagem do planejamento. |
 | Reconhecimento no Demo Day | A melhor busca da Alpha Junior, com a string e a evidência, aparece no pitch final do projeto, com crédito para a equipe. | Dá um motivo para caprichar e liga o trabalho deles ao resultado do projeto. |
 
-## Como poderia ficar uma oficina de 2 h
+## Organização de uma Oficina teste
 
 | Tempo | Momento |
 | :-- | :-- |
@@ -34,11 +24,3 @@ Do [inventário](inventario-de-gibis.md) vêm o S3V20 (Gerenciando Ativos por PI
 | 25 min | Fase de análise: abrir as cartas de documento e ligar cada ponto a uma evidência |
 | 15 min | Pitch curto de cada equipe |
 | 20 min | Debriefing com os documentos reais abertos nas bases e registro das dúvidas |
-
-## Como saber se funcionou
-
-Vamos registrar presença, quantos pontos vieram com evidência, quantas rodadas terminaram dentro do tempo, as respostas do diagnóstico antes e depois e as respostas às perguntas do que ajudou, do que ficou confuso e do que mudar. Esses registros entram nos indicadores de participação, aprendizagem e utilidade do planejamento.
-
-## Para decidir na reunião de 27/11
-
-Escolher entre jogo cooperativo e competitivo depois de ouvir o Pedro sobre o perfil da Alpha Junior. Definir com o Caio quais ideias entram no material físico e quais ficam no portal. Escolher os documentos reais das cartas, que dependem do recorte do caso piloto.

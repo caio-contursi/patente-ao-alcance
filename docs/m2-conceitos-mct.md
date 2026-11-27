@@ -1,9 +1,5 @@
 # Conceitos de Metodologia Científica e Tecnológica (M2)
 
-Levantamento de 23 a 26 de novembro de 2026. Reúne os conceitos de MCT que o projeto usa no portal, no jogo e no ensino técnico preparado para a Alpha Junior. A base é a Série 6 dos Almanaques da Computação, já listada no [inventário](inventario-de-gibis.md), cruzada com o [planejamento](planejamento-do-projeto.md) e com o diagnóstico de cinco perguntas.
-
-Como a Alpha Junior é a empresa júnior de BSI, o público já tem familiaridade com busca em bases, operadores lógicos e modelagem de dados. Por isso a sequência aproveita exemplos de computação e deixa o vocabulário jurídico para quando ele for necessário.
-
 ## Fontes lidas
 
 | Volume | Conteúdo confirmado | Observação |
@@ -30,8 +26,6 @@ Como a Alpha Junior é a empresa júnior de BSI, o público já tem familiaridad
 | Reprodutibilidade | Registrar base, data, string, filtros, resultados e limitações para outra pessoa repetir a busca. | Planejamento (M2 e M4) | Ficha de busca, clínica |
 | Publicação e direito vigente | Distinguir um pedido publicado de uma patente concedida e em vigor, e saber onde conferir a situação no INPI. | Diagnóstico (pergunta 4) | Oficina 2, clínica |
 
-Para o caso piloto de captação de água de chuva, o exemplo de classificação é a seção E (construções fixas), subclasse E03B, que trata de instalações e métodos para obter, coletar ou distribuir água. Ele serve tanto para a oficina quanto para o recorte do panorama.
-
 ## Sequência para a Alpha Junior
 
 | Momento | Conceitos | Atividade | Material |
@@ -41,16 +35,4 @@ Para o caso piloto de captação de água de chuva, o exemplo de classificação
 | Oficina 2 | CIP, string, bases, família, publicação e direito vigente | Montar a string do caso, rodar em duas bases e comparar os resultados | S6V2, S6V3, S6V4 |
 | Clínica | Mapeamento sistemático e reprodutibilidade | Busca documentada com critérios e relatório revisado por outro integrante | S6V7 a S6V11 |
 
-## Ligação com o diagnóstico de cinco perguntas
 
-| Pergunta | Conceitos que preparam a resposta |
-| :-- | :-- |
-| Que tipo de proteção pode se relacionar ao exemplo apresentado? | Tipos de proteção (Série 3), informação tecnológica |
-| Como transformar uma necessidade em uma consulta de busca? | Palavras-chave, limites da palavra-chave, CIP, string de busca |
-| Onde localizar uma reivindicação em um documento de patente? | Partes do documento de patente |
-| Por que uma publicação não confirma, sozinha, um direito vigente? | Publicação e direito vigente, família de patentes |
-| O que ainda é preciso verificar antes de explorar comercialmente uma solução estudada? | Estado da técnica, bases de busca, reprodutibilidade |
-
-## Pendências
-
-O nível de cada conceito na Alpha Junior depende da reunião conduzida pelo Pedro. A ordem das atividades precisa bater com as regras e os materiais do jogo definidos pelo Caio. Os volumes S6V3 e S6V4 devem ser lidos nas páginas em imagem antes da Oficina 2 para confirmar operadores e campos do Espacenet.

@@ -1,4 +1,4 @@
-# Ideias de engajamento para o jogo (M2)
+# Ideias para o jogo 
 
 | Ideia | Como funciona | Por que ajuda |
 | :-- | :-- | :-- |
